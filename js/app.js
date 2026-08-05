@@ -383,7 +383,16 @@ async function loadGames() {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     allGames = data.games.filter(g => g.published);
-    document.getElementById('site-name').textContent = data.site.name;
+    document.getElementById('site-name').textContent = '';
+    // 站名拆成单字 span，实现波浪弹起动画
+    const nameChars = String(data.site.name || '').split('');
+    const nameEl = document.getElementById('site-name');
+    nameChars.forEach(ch => {
+      const s = document.createElement('span');
+      s.className = 't-char';
+      s.textContent = ch;
+      nameEl.appendChild(s);
+    });
     document.getElementById('announcement').textContent = data.site.announcement;
     document.getElementById('footer-disclaimer').textContent = data.site.footer || '';
     window._siteData = data.site;

@@ -1,5 +1,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+@font-face{
+  font-family:'PressStart';
+  src:url('fonts/press-start-2p.woff2') format('woff2');
+  font-weight:normal;font-style:normal;font-display:swap;
+}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:#f8fafc;color:#1f2937;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -8,7 +13,24 @@ img[hidden]{display:none}
 
 .site-header{background:#ffffff;border-bottom:1px solid #e5e7eb;padding:24px 0 16px;position:sticky;top:0;z-index:50}
 .header-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.site-name{font-size:28px;font-weight:800;color:#1f2937}
+.site-brand{display:flex;align-items:center;gap:14px}
+.site-logo{width:56px;height:56px;object-fit:contain;display:inline-block;flex-shrink:0;transform-origin:bottom center;animation:logoBounce 6.1s ease-in-out infinite}
+/* 静止 3.5 秒 + 完成一次 2.6 秒蹦跳：总周期 6.1 秒，蹦跳在 57.4%~100% */
+@keyframes logoBounce{
+  0%,57%{transform:translateY(0)}
+  71%{transform:translateY(-10px)}
+  85%{transform:translateY(0)}
+  94%{transform:translateY(-4px)}
+  100%{transform:translateY(0)}
+}
+.site-name{font-size:36px;font-weight:800;color:#1f2937;line-height:1.1;display:inline-block;cursor:default}
+.site-name .t-char{display:inline-block;transition:transform .35s cubic-bezier(.34,1.56,.64,1),color .25s ease;will-change:transform}
+/* 波浪弹起：hover 当前字，当前字及右侧字依次弹起 */
+.site-name:hover .t-char{color:#f59e0b}
+.site-name .t-char:hover{transform:translateY(-6px) scale(1.25);color:#fbbf24}
+.site-name .t-char:hover + .t-char{transform:translateY(-4px) scale(1.12);transition-delay:.06s}
+.site-name .t-char:hover + .t-char + .t-char{transform:translateY(-2px) scale(1.06);transition-delay:.12s}
+.site-name .t-char:hover + .t-char + .t-char + .t-char{transform:translateY(-1px) scale(1.02);transition-delay:.18s}
 .announcement{color:#6b7280;font-size:14px;margin-top:6px}
 .search-box{flex:0 1 260px;padding:8px 14px;border:1px solid #d1d5db;border-radius:999px;font-size:14px;outline:none;background:#f9fafb}
 .search-box:focus{border-color:#2563eb;background:#fff}
@@ -66,7 +88,7 @@ img[hidden]{display:none}
 
 .site-footer{border-top:1px solid #e5e7eb;padding:24px 0;color:#9ca3af;font-size:13px;text-align:center}
 
-@media(max-width:640px){.search-box{flex-basis:100%}.game-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.modal-panel{max-width:100%;border-radius:12px}.modal-gallery{padding:14px 14px 0}.modal-info{padding:12px 14px 20px}.card-cover{font-size:28px}}
+@media(max-width:640px){.search-box{flex-basis:100%}.game-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.modal-panel{max-width:100%;border-radius:12px}.modal-gallery{padding:14px 14px 0}.modal-info{padding:12px 14px 20px}.card-cover{font-size:28px}.site-logo{width:48px;height:48px}.site-name{font-size:30px}}
 
 /* ===== 升级：导航两级标签 ===== */
 /* 悬浮购物车按钮 */
@@ -106,6 +128,7 @@ img[hidden]{display:none}
 .dialog-actions button{padding:8px 18px;border:none;border-radius:8px;font-size:14px;cursor:pointer}
 .dialog-actions .dialog-cancel{background:#f3f4f6;color:#374151}
 .dialog-actions .dialog-ok{background:#2563eb;color:#fff}
+
 .section-bar{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
 .section-tab{padding:6px 16px;border-radius:8px;font-size:13px;color:#4b5563;background:#eef2ff;cursor:pointer;user-select:none;border:none;font-weight:600}
 .section-tab:hover{background:#dbe3ff}
