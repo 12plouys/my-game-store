@@ -19,16 +19,19 @@
       "id": "demo1",
       "name": "久子的秘密",
       "section": "游戏",
+      "categories": [
+        "PC"
+      ],
       "category": "PC",
       "price": "4.3",
-      "description": "NTR类型的游戏，CG质量不错，可以给到顶级",
+      "description": "NTR类型的游戏，CG质量不错\n可以给到顶级",
       "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.png",
       "screenshots": [
-        "images/1785879644049_ScreenShot_2026-07-11_042542_956.png",
-        "images/1785879644052_ScreenShot_2026-07-11_042652_797.png",
+        "images/1785879644058_ScreenShot_2026-07-11_043339_911.png",
         "images/1785879644054_ScreenShot_2026-07-11_042814_569.png",
+        "images/1785879644052_ScreenShot_2026-07-11_042652_797.png",
         "images/1785879644057_ScreenShot_2026-07-11_042854_075.png",
-        "images/1785879644058_ScreenShot_2026-07-11_043339_911.png"
+        "images/1785879644049_ScreenShot_2026-07-11_042542_956.png"
       ],
       "published": true
     },
@@ -36,9 +39,12 @@
       "id": "demo2",
       "name": "邻居家的妻子",
       "section": "游戏",
+      "categories": [
+        "PC"
+      ],
       "category": "PC",
       "price": "¥4.5",
-      "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高，给到一个夯",
+      "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高\n给到一个夯",
       "cover": "images/1785879968631_ScreenShot_2026-07-11_041659_779.png",
       "screenshots": [
         "images/1785879973101_ScreenShot_2026-07-11_041737_076.png",
@@ -51,9 +57,12 @@
       "id": "demo3",
       "name": "最强全女宗门1+2全集",
       "section": "漫画",
+      "categories": [
+        "黑白漫画"
+      ],
       "category": "黑白漫画",
       "price": "¥4",
-      "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。可以给到夯",
+      "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。\n可以给到夯",
       "cover": "images/1785880175149_234_tsha.jpg",
       "screenshots": [
         "images/1785880187409_031_qtla.jpg",
@@ -70,77 +79,124 @@
       "id": "demo4",
       "name": "乡间性活夏日+冬日（安卓apk+pc）",
       "section": "游戏",
+      "categories": [
+        "安卓"
+      ],
       "category": "安卓",
       "price": "¥5.5",
-      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了，夯完了！",
+      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
       "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.png",
       "screenshots": [
         "images/1785880453545_ScreenShot_2026-07-11_175902_488.png",
+        "images/1785880453552_ScreenShot_2026-07-11_180427_257.png",
         "images/1785880453548_ScreenShot_2026-07-11_180336_732.png",
         "images/1785880453550_ScreenShot_2026-07-11_180411_578.png",
-        "images/1785880453552_ScreenShot_2026-07-11_180427_257.png",
-        "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
-        "images/1785880453554_ScreenShot_2026-07-11_180615_801.png",
         "images/1785880453555_ScreenShot_2026-07-11_180724_403.png",
         "images/1785880453557_ScreenShot_2026-07-11_180801_414.png",
         "images/1785880453558_ScreenShot_2026-07-11_180900_804.png",
-        "images/1785880453560_ScreenShot_2026-07-11_180941_009.png"
+        "images/1785880453560_ScreenShot_2026-07-11_180941_009.png",
+        "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
+        "images/1785880453554_ScreenShot_2026-07-11_180615_801.png"
       ],
       "published": true
     },
     {
       "id": "demo5",
-      "name": "示例游戏 C",
+      "name": "牛头人狂热（安卓apk+PC）",
       "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
       "category": "PC",
       "price": "¥45",
-      "description": "这是示例游戏 C 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "description": "很早之前的游戏了，老司机应该都玩过了，没玩过的朋友可以试一下，NTL题材受益人群不同\n这里可以给到一个：顶级",
+      "cover": "images/1785932881336_ScreenShot_2026-07-11_044547_460.png",
+      "screenshots": [
+        "images/1785932652840_ScreenShot_2026-07-11_044901_883.png",
+        "images/1785932652843_ScreenShot_2026-07-11_044937_121.png",
+        "images/1785932652845_ScreenShot_2026-07-11_045002_533.png",
+        "images/1785932652847_ScreenShot_2026-07-11_045051_403.png"
+      ],
       "published": true
     },
     {
       "id": "demo6",
-      "name": "示例游戏 D",
+      "name": "催眠大小姐（安卓apk+PC）",
       "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
       "category": "安卓",
-      "price": "¥18",
-      "description": "这是示例游戏 D 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "price": "¥4.5",
+      "description": "玩法挺多的一款游戏，体验下来还不错\n可以给到：顶级",
+      "cover": "images/1785932892206_ScreenShot_2026-07-11_043555_926.png",
+      "screenshots": [
+        "images/1785932899755_ScreenShot_2026-07-11_043607_505.png",
+        "images/1785932899759_ScreenShot_2026-07-11_043704_767.png",
+        "images/1785932899761_ScreenShot_2026-07-11_044021_639.png"
+      ],
       "published": true
     },
     {
       "id": "demo7",
-      "name": "示例漫画 B",
-      "section": "漫画",
-      "category": "国漫",
-      "price": "¥15",
-      "description": "这是示例漫画 B 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "name": "小心大姐姐",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "¥4.3",
+      "description": "小马拉大车，就是马太小了，都看不见主角了。\n豌豆射手这一块，没啥剧情就是纯战斗\n这里给到一个：人上人",
+      "cover": "images/1785933007514_ScreenShot_2026-07-11_155335_836.png",
+      "screenshots": [
+        "images/1785933023367_ScreenShot_2026-07-11_155516_270.png",
+        "images/1785933023369_ScreenShot_2026-07-11_155555_124.png",
+        "images/1785933023370_ScreenShot_2026-07-11_155629_105.png",
+        "images/1785933023371_ScreenShot_2026-07-11_155744_507.png"
+      ],
       "published": true
     },
     {
       "id": "demo8",
-      "name": "示例视频 B",
-      "section": "视频",
-      "category": "合集",
-      "price": "¥6",
-      "description": "这是示例视频 B 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "name": "边境小店",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "¥4.1",
+      "description": "CG质量还不错，NTL题材\n这里可以给到：人上人",
+      "cover": "images/1785933139438_ScreenShot_2026-07-11_171055_474.png",
+      "screenshots": [
+        "images/1785933182387_ScreenShot_2026-07-11_170545_628.png",
+        "images/1785933182396_ScreenShot_2026-07-11_170954_399.png",
+        "images/1785933182389_ScreenShot_2026-07-11_170619_779.png",
+        "images/1785933182390_ScreenShot_2026-07-11_170631_023.png",
+        "images/1785933182391_ScreenShot_2026-07-11_170826_761.png",
+        "images/1785933182393_ScreenShot_2026-07-11_170912_910.png",
+        "images/1785933182395_ScreenShot_2026-07-11_170934_745.png"
+      ],
       "published": true
     },
     {
       "id": "demo9",
-      "name": "示例游戏 E",
+      "name": "魔王居然是岳母",
       "section": "游戏",
+      "categories": [
+        "PC"
+      ],
       "category": "PC",
-      "price": "¥28",
-      "description": "这是示例游戏 E 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "price": "¥4.5",
+      "description": "画风不错，内置小游戏可以玩，CG质量也可以\n这里给到：顶级",
+      "cover": "images/1785933348371_ScreenShot_2026-07-12_141242_699.png",
+      "screenshots": [
+        "images/1785933316086_ScreenShot_2026-07-12_141338_417.png",
+        "images/1785933316089_ScreenShot_2026-07-12_141452_311.png",
+        "images/1785933316090_ScreenShot_2026-07-12_142456_013.png",
+        "images/1785933316091_ScreenShot_2026-07-12_142557_146.png"
+      ],
       "published": true
     },
     {

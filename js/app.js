@@ -236,6 +236,15 @@ function makeSectionTab(label, active) {
   return b;
 }
 
+// 读取游戏的细分标签：优先 categories 数组，兼容旧 category 单值
+function getGameCategories(g) {
+  if (Array.isArray(g.categories)) return g.categories.map(String).map(s => s.trim()).filter(Boolean);
+  if (g.category && String(g.category).trim()) {
+    return String(g.category).split(/[,，/、]/).map(s => s.trim()).filter(Boolean);
+  }
+  return [];
+}
+
 function renderCategories(section) {
   const bar = document.getElementById('category-bar');
   if (section === '全部') {
@@ -244,7 +253,9 @@ function renderCategories(section) {
     return;
   }
   bar.hidden = false;
-  const cats = [...new Set(allGames.filter(g => (g.section || '').trim() === section).map(g => (g.category || '').trim()).filter(Boolean))];
+  const cats = [...new Set(allGames
+    .filter(g => (g.section || '').trim() === section)
+    .flatMap(g => getGameCategories(g)))];
   bar.innerHTML = '';
   bar.appendChild(makeCategoryTab('全部', true));
   cats.forEach(c => bar.appendChild(makeCategoryTab(c, false)));
@@ -271,7 +282,7 @@ function getFilteredList() {
   const kw = document.getElementById('search-box').value.trim().toLowerCase();
   let list = allGames;
   if (currentSection !== '全部') list = list.filter(g => (g.section || '').trim() === currentSection);
-  if (currentCategory !== '全部') list = list.filter(g => (g.category || '').trim() === currentCategory);
+  if (currentCategory !== '全部') list = list.filter(g => getGameCategories(g).includes(currentCategory));
   if (kw) list = list.filter(g => (g.name + g.description).toLowerCase().includes(kw));
   return list;
 }
@@ -346,7 +357,7 @@ function buildCard(game) {
       </div>
       <div class="card-tags">
         <span class="card-section">${escapeHtml(game.section || '')}</span>
-        <span class="card-category">${escapeHtml(game.category || '')}</span>
+        ${getGameCategories(game).map(c => `<span class="card-category">${escapeHtml(c)}</span>`).join('')}
       </div>
     </div>`;
   card.addEventListener('click', (e) => {
@@ -394,13 +405,26 @@ let galleryIndex = 0;
 function openDetail(game) {
   const modal = document.getElementById('detail-modal');
   const infoEl = document.getElementById('modal-info');
+  // 截图列表（主画廊/缩略图只显示截图）
   const safeShots = (game.screenshots || []).filter(isSafeImageUrl).slice(0, 10);
   galleryShots = safeShots;
   galleryIndex = 0;
+  // 灯箱浏览列表 = 封面（若有）+ 截图
+  const coverOk = game.cover && isSafeImageUrl(game.cover);
+  lightboxShots = (coverOk ? [game.cover] : []).concat(safeShots);
+  lightboxIndex = 0;
   const imgEl = document.getElementById('gallery-main');
   const emptyEl = document.getElementById('gallery-empty');
   const prevBtn = document.getElementById('gallery-prev');
   const nextBtn = document.getElementById('gallery-next');
+  // 封面展示
+  const coverEl = document.getElementById('modal-cover');
+  if (coverOk) {
+    coverEl.hidden = false;
+    document.getElementById('modal-cover-img').src = game.cover;
+  } else {
+    coverEl.hidden = true;
+  }
   if (safeShots.length) {
     imgEl.hidden = false;
     emptyEl.hidden = true;
@@ -417,7 +441,7 @@ function openDetail(game) {
   }
   infoEl.innerHTML = `
     <div class="modal-title"><span>${escapeHtml(game.name)}</span><span class="modal-price">${escapeHtml(game.price)}</span></div>
-    <span class="modal-category">${escapeHtml(game.category || '')}</span>
+    <div class="modal-cats">${getGameCategories(game).map(c => `<span class="modal-category">${escapeHtml(c)}</span>`).join('')}</div>
     <p class="modal-desc">${escapeHtml(game.description || '暂无简介')}</p>`;
   const addBtn = document.getElementById('detail-add-btn');
   addBtn.classList.toggle('added', cartItems.includes(game.id));
@@ -470,6 +494,81 @@ function showGalleryImage() {
 document.getElementById('gallery-prev').addEventListener('click', () => galleryNav(-1));
 document.getElementById('gallery-next').addEventListener('click', () => galleryNav(1));
 
+// 详情弹窗大图点击 → 打开全屏灯箱（从截图索引映射到灯箱列表，+1 跳过封面）
+document.getElementById('gallery-main').addEventListener('click', () => {
+  if (!galleryShots.length) return;
+  openLightbox(galleryIndex + (lightboxShots.length > galleryShots.length ? 1 : 0));
+});
+
+// 详情弹窗封面点击 → 打开灯箱看封面
+document.getElementById('modal-cover').addEventListener('click', () => {
+  if (!lightboxShots.length) return;
+  openLightbox(0);
+});
+
+// ── 全屏图片灯箱 ──────────────────────────────────────────
+let lightboxOpen = false;
+let lightboxShots = [];
+let lightboxIndex = 0;
+
+function openLightbox(index) {
+  if (!lightboxShots.length) return;
+  lightboxIndex = index;
+  lightboxOpen = true;
+  updateLightbox();
+  document.getElementById('lightbox').hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lightbox-prev').hidden = lightboxShots.length < 2;
+  document.getElementById('lightbox-next').hidden = lightboxShots.length < 2;
+}
+
+function closeLightbox() {
+  if (!lightboxOpen) return;
+  lightboxOpen = false;
+  document.getElementById('lightbox').hidden = true;
+  // 若详情弹窗仍开着，把截图列表还原到灯箱里最后看的对应张
+  if (!document.getElementById('detail-modal').hidden && galleryShots.length) {
+    const shotIdx = lightboxIndex - (lightboxShots.length > galleryShots.length ? 1 : 0);
+    if (shotIdx >= 0 && shotIdx < galleryShots.length) {
+      galleryIndex = shotIdx;
+      showGalleryImage();
+    }
+  }
+  if (document.getElementById('detail-modal').hidden && document.getElementById('cart-drawer').hidden) {
+    document.body.style.overflow = '';
+  }
+}
+
+function updateLightbox() {
+  const img = document.getElementById('lightbox-img');
+  img.src = lightboxShots[lightboxIndex];
+  document.getElementById('lightbox-counter').textContent =
+    lightboxShots.length > 1 ? (lightboxIndex + 1) + ' / ' + lightboxShots.length : '';
+}
+
+function lightboxNav(dir) {
+  if (lightboxShots.length < 2) return;
+  lightboxIndex = (lightboxIndex + dir + lightboxShots.length) % lightboxShots.length;
+  updateLightbox();
+}
+
+document.getElementById('lightbox-prev').addEventListener('click', () => lightboxNav(-1));
+document.getElementById('lightbox-next').addEventListener('click', () => lightboxNav(1));
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.getElementById('lightbox-backdrop').addEventListener('click', closeLightbox);
+
+// Esc：优先关闭灯箱，其次关详情/购物车
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (lightboxOpen) { closeLightbox(); }
+    else if (!document.getElementById('detail-modal').hidden) closeDetail();
+  }
+  // 灯箱内方向键切换
+  if (lightboxOpen && e.key === 'ArrowLeft') lightboxNav(-1);
+  if (lightboxOpen && e.key === 'ArrowRight') lightboxNav(1);
+});
+document.getElementById('search-box').addEventListener('input', () => { currentPage = 1; applyFilter(); });
+
 function closeDetail() {
   document.getElementById('detail-modal').hidden = true;
   document.body.style.overflow = '';
@@ -477,7 +576,5 @@ function closeDetail() {
 
 document.getElementById('modal-close').addEventListener('click', closeDetail);
 document.getElementById('modal-backdrop').addEventListener('click', closeDetail);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
-document.getElementById('search-box').addEventListener('input', () => { currentPage = 1; applyFilter(); });
 
 loadGames();

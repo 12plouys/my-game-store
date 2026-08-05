@@ -32,6 +32,9 @@
     <div class="modal-panel">
       <button class="modal-close" id="modal-close">&times;</button>
       <div class="modal-body" id="modal-body">
+        <div class="modal-cover" id="modal-cover" hidden>
+          <img id="modal-cover-img" alt="封面" title="点击放大">
+        </div>
         <div class="modal-gallery">
           <img id="gallery-main" alt="" hidden>
           <div class="gallery-placeholder" id="gallery-empty">暂无截图</div>
@@ -43,6 +46,16 @@
       </div>
       <button class="detail-add" id="detail-add-btn"></button>
     </div>
+  </div>
+
+  <!-- 图片全屏放大灯箱 -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <img id="lightbox-img" alt="">
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" hidden>&#8249;</button>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" hidden>&#8250;</button>
+    <button class="lightbox-close" id="lightbox-close" title="关闭">&times;</button>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
   </div>
 
   <div class="cart-drawer" id="cart-drawer" hidden>
