@@ -23,7 +23,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "4.3",
+      "price": "¥4.3",
       "description": "NTR类型的游戏，CG质量不错\n可以给到顶级",
       "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.png",
       "screenshots": [
@@ -54,28 +54,6 @@
       "published": true
     },
     {
-      "id": "demo3",
-      "name": "最强全女宗门1+2全集",
-      "section": "漫画",
-      "categories": [
-        "黑白漫画"
-      ],
-      "category": "黑白漫画",
-      "price": "¥4",
-      "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。\n可以给到夯",
-      "cover": "images/1785880175149_234_tsha.jpg",
-      "screenshots": [
-        "images/1785880187409_031_qtla.jpg",
-        "images/1785880187411_065__12.png",
-        "images/1785880187414_085__32.png",
-        "images/1785880187416_156__01.png",
-        "images/1785880187417_156_vmhe.jpg",
-        "images/1785880187418_219_34.jpg",
-        "images/1785880187420_325.jpg"
-      ],
-      "published": true
-    },
-    {
       "id": "demo4",
       "name": "乡间性活夏日+冬日（安卓apk+pc）",
       "section": "游戏",
@@ -97,6 +75,48 @@
         "images/1785880453560_ScreenShot_2026-07-11_180941_009.png",
         "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
         "images/1785880453554_ScreenShot_2026-07-11_180615_801.png"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1785933806571",
+      "name": "母子系列漫画合集",
+      "section": "漫画",
+      "categories": [],
+      "category": "",
+      "price": "¥4.5",
+      "description": "非常不错的母子本，画风非常棒非常符合我的口味，喜欢这个题材的朋友可以试试\n我这里给到一个：夯",
+      "cover": "images/1785933839526_001_auqa.jpg",
+      "screenshots": [
+        "images/1785933850120_0001.jpg",
+        "images/1785933850124_001.jpg",
+        "images/1785933850126_04.jpg",
+        "images/1785933850127_12.jpg",
+        "images/1785933850128_0051.jpg",
+        "images/1785933850131_053_cdsf.jpg",
+        "images/1785933850133_093.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo3",
+      "name": "最强全女宗门1+2全集",
+      "section": "漫画",
+      "categories": [
+        "黑白漫画"
+      ],
+      "category": "黑白漫画",
+      "price": "¥4",
+      "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。\n可以给到夯",
+      "cover": "images/1785880175149_234_tsha.jpg",
+      "screenshots": [
+        "images/1785880187409_031_qtla.jpg",
+        "images/1785880187411_065__12.png",
+        "images/1785880187414_085__32.png",
+        "images/1785880187416_156__01.png",
+        "images/1785880187417_156_vmhe.jpg",
+        "images/1785880187418_219_34.jpg",
+        "images/1785880187420_325.jpg"
       ],
       "published": true
     },
@@ -201,13 +221,23 @@
     },
     {
       "id": "demo10",
-      "name": "示例漫画 C",
-      "section": "漫画",
-      "category": "国漫",
-      "price": "¥10",
-      "description": "这是示例漫画 C 的简介。",
-      "cover": "",
-      "screenshots": [],
+      "name": "清洁工传奇",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "¥4.5",
+      "description": "像素风游戏，CG质量很不错，还是全动态的\n可以给到一个：顶级",
+      "cover": "images/1785933721919_ScreenShot_2026-07-12_143042_832.png",
+      "screenshots": [
+        "images/1785933732670_ScreenShot_2026-07-12_143457_593.png",
+        "images/1785933732673_ScreenShot_2026-07-12_143603_397.png",
+        "images/1785933732676_ScreenShot_2026-07-12_145312_464.png",
+        "images/1785933732678_ScreenShot_2026-07-12_145354_863.png",
+        "images/1785933732680_ScreenShot_2026-07-12_145430_139.png",
+        "images/1785933732674_ScreenShot_2026-07-12_145225_120.png"
+      ],
       "published": true
     }
   ]
