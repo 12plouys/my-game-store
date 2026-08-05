@@ -41,6 +41,28 @@
       "published": true
     },
     {
+      "id": "g1785937629486",
+      "name": "45号列车",
+      "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
+      "category": "PC",
+      "price": "¥5",
+      "description": "神作，像素高质量动态CG，7月新游\n毫无疑问的给到：夯！",
+      "cover": "images/1785937705925_ScreenShot_2026-08-05_214051_259.png",
+      "screenshots": [
+        "images/1785937713828_ScreenShot_2026-08-05_214421_211.png",
+        "images/1785937713829_ScreenShot_2026-08-05_214455_844.png",
+        "images/1785937713831_ScreenShot_2026-08-05_214536_535.png",
+        "images/1785937713832_ScreenShot_2026-08-05_214613_032.png",
+        "images/1785937713832_ScreenShot_2026-08-05_214629_386.png",
+        "images/1785937713833_ScreenShot_2026-08-05_214700_691.png"
+      ],
+      "published": true
+    },
+    {
       "id": "demo1",
       "name": "久子的秘密",
       "section": "游戏",
