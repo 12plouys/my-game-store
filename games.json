@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "尴尬小狗的收藏目录",
+    "announcement": "精选游戏，作者亲自品鉴，从夯到拉排名",
+    "footer": "本站仅作游戏展示，购买请联系卖家。",
+    "contact": {
+      "wechat": "",
+      "qq": ""
+    },
+    "pageSize": 8,
+    "sections": [
+      "游戏",
+      "漫画",
+      "视频"
+    ]
+  },
+  "games": [
+    {
+      "id": "demo1",
+      "name": "久子的秘密",
+      "section": "游戏",
+      "category": "PC",
+      "price": "4.3",
+      "description": "NTR类型的游戏，CG质量不错，可以给到顶级",
+      "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.png",
+      "screenshots": [
+        "images/1785879644049_ScreenShot_2026-07-11_042542_956.png",
+        "images/1785879644052_ScreenShot_2026-07-11_042652_797.png",
+        "images/1785879644054_ScreenShot_2026-07-11_042814_569.png",
+        "images/1785879644057_ScreenShot_2026-07-11_042854_075.png",
+        "images/1785879644058_ScreenShot_2026-07-11_043339_911.png"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo2",
+      "name": "邻居家的妻子",
+      "section": "游戏",
+      "category": "PC",
+      "price": "¥4.5",
+      "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高，给到一个夯",
+      "cover": "images/1785879968631_ScreenShot_2026-07-11_041659_779.png",
+      "screenshots": [
+        "images/1785879973101_ScreenShot_2026-07-11_041737_076.png",
+        "images/1785879973104_ScreenShot_2026-07-11_042103_896.png",
+        "images/1785879973106_ScreenShot_2026-07-11_042202_662.png"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo3",
+      "name": "最强全女宗门1+2全集",
+      "section": "漫画",
+      "category": "黑白漫画",
+      "price": "¥4",
+      "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。可以给到夯",
+      "cover": "images/1785880175149_234_tsha.jpg",
+      "screenshots": [
+        "images/1785880187409_031_qtla.jpg",
+        "images/1785880187411_065__12.png",
+        "images/1785880187414_085__32.png",
+        "images/1785880187416_156__01.png",
+        "images/1785880187417_156_vmhe.jpg",
+        "images/1785880187418_219_34.jpg",
+        "images/1785880187420_325.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo4",
+      "name": "乡间性活夏日+冬日（安卓apk+pc）",
+      "section": "游戏",
+      "category": "安卓",
+      "price": "¥5.5",
+      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了，夯完了！",
+      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.png",
+      "screenshots": [
+        "images/1785880453545_ScreenShot_2026-07-11_175902_488.png",
+        "images/1785880453548_ScreenShot_2026-07-11_180336_732.png",
+        "images/1785880453550_ScreenShot_2026-07-11_180411_578.png",
+        "images/1785880453552_ScreenShot_2026-07-11_180427_257.png",
+        "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
+        "images/1785880453554_ScreenShot_2026-07-11_180615_801.png",
+        "images/1785880453555_ScreenShot_2026-07-11_180724_403.png",
+        "images/1785880453557_ScreenShot_2026-07-11_180801_414.png",
+        "images/1785880453558_ScreenShot_2026-07-11_180900_804.png",
+        "images/1785880453560_ScreenShot_2026-07-11_180941_009.png"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo5",
+      "name": "示例游戏 C",
+      "section": "游戏",
+      "category": "PC",
+      "price": "¥45",
+      "description": "这是示例游戏 C 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "id": "demo6",
+      "name": "示例游戏 D",
+      "section": "游戏",
+      "category": "安卓",
+      "price": "¥18",
+      "description": "这是示例游戏 D 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "id": "demo7",
+      "name": "示例漫画 B",
+      "section": "漫画",
+      "category": "国漫",
+      "price": "¥15",
+      "description": "这是示例漫画 B 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "id": "demo8",
+      "name": "示例视频 B",
+      "section": "视频",
+      "category": "合集",
+      "price": "¥6",
+      "description": "这是示例视频 B 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "id": "demo9",
+      "name": "示例游戏 E",
+      "section": "游戏",
+      "category": "PC",
+      "price": "¥28",
+      "description": "这是示例游戏 E 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "id": "demo10",
+      "name": "示例漫画 C",
+      "section": "漫画",
+      "category": "国漫",
+      "price": "¥10",
+      "description": "这是示例漫画 C 的简介。",
+      "cover": "",
+      "screenshots": [],
+      "published": true
+    }
+  ]
+}
