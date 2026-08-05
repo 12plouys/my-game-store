@@ -16,6 +16,31 @@
   },
   "games": [
     {
+      "id": "demo4",
+      "name": "乡间性活夏日+冬日（安卓apk+pc）",
+      "section": "游戏",
+      "categories": [
+        "安卓"
+      ],
+      "category": "安卓",
+      "price": "¥5.5",
+      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
+      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.png",
+      "screenshots": [
+        "images/1785880453545_ScreenShot_2026-07-11_175902_488.png",
+        "images/1785880453552_ScreenShot_2026-07-11_180427_257.png",
+        "images/1785880453548_ScreenShot_2026-07-11_180336_732.png",
+        "images/1785880453550_ScreenShot_2026-07-11_180411_578.png",
+        "images/1785880453555_ScreenShot_2026-07-11_180724_403.png",
+        "images/1785880453557_ScreenShot_2026-07-11_180801_414.png",
+        "images/1785880453558_ScreenShot_2026-07-11_180900_804.png",
+        "images/1785880453560_ScreenShot_2026-07-11_180941_009.png",
+        "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
+        "images/1785880453554_ScreenShot_2026-07-11_180615_801.png"
+      ],
+      "published": true
+    },
+    {
       "id": "demo1",
       "name": "久子的秘密",
       "section": "游戏",
@@ -49,31 +74,6 @@
         "images/1785879973101_ScreenShot_2026-07-11_041737_076.png",
         "images/1785879973104_ScreenShot_2026-07-11_042103_896.png",
         "images/1785879973106_ScreenShot_2026-07-11_042202_662.png"
-      ],
-      "published": true
-    },
-    {
-      "id": "demo4",
-      "name": "乡间性活夏日+冬日（安卓apk+pc）",
-      "section": "游戏",
-      "categories": [
-        "安卓"
-      ],
-      "category": "安卓",
-      "price": "¥5.5",
-      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
-      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.png",
-      "screenshots": [
-        "images/1785880453545_ScreenShot_2026-07-11_175902_488.png",
-        "images/1785880453552_ScreenShot_2026-07-11_180427_257.png",
-        "images/1785880453548_ScreenShot_2026-07-11_180336_732.png",
-        "images/1785880453550_ScreenShot_2026-07-11_180411_578.png",
-        "images/1785880453555_ScreenShot_2026-07-11_180724_403.png",
-        "images/1785880453557_ScreenShot_2026-07-11_180801_414.png",
-        "images/1785880453558_ScreenShot_2026-07-11_180900_804.png",
-        "images/1785880453560_ScreenShot_2026-07-11_180941_009.png",
-        "images/1785880453553_ScreenShot_2026-07-11_180526_101.png",
-        "images/1785880453554_ScreenShot_2026-07-11_180615_801.png"
       ],
       "published": true
     },
