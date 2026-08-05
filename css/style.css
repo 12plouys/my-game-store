@@ -125,7 +125,7 @@ img[hidden]{display:none}
 .lightbox[hidden]{display:none}
 .lightbox-backdrop{position:absolute;inset:0;background:rgba(255,255,255,.55);backdrop-filter:blur(2px)}
 .lightbox-panel{position:relative;background:#fff;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.18);padding:18px;max-width:calc(100vw - 80px);max-height:calc(100vh - 80px);display:flex;flex-direction:column;align-items:center}
-.lightbox-img{display:block;max-width:640px;max-height:480px;object-fit:contain;border-radius:8px;flex-shrink:1;min-width:0}
+.lightbox-img{display:block;max-width:960px;max-height:720px;object-fit:contain;border-radius:8px;flex-shrink:1;min-width:0}
 @keyframes lightboxZoom{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
 .lightbox-panel{animation:lightboxZoom .18s ease}
 .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:#f3f4f6;color:#374151;font-size:24px;cursor:pointer;opacity:.9;transition:opacity .2s,background .2s,transform .15s;display:flex;align-items:center;justify-content:center;z-index:1;box-shadow:0 2px 8px rgba(0,0,0,.1)}
