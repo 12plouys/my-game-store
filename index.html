@@ -48,14 +48,16 @@
     </div>
   </div>
 
-  <!-- 图片全屏放大灯箱 -->
+  <!-- 图片放大浏览（小窗） -->
   <div class="lightbox" id="lightbox" hidden>
     <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
-    <img id="lightbox-img" alt="">
-    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" hidden>&#8249;</button>
-    <button class="lightbox-nav lightbox-next" id="lightbox-next" hidden>&#8250;</button>
-    <button class="lightbox-close" id="lightbox-close" title="关闭">&times;</button>
-    <div class="lightbox-counter" id="lightbox-counter"></div>
+    <div class="lightbox-panel" id="lightbox-panel">
+      <img class="lightbox-img" id="lightbox-img" alt="">
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" hidden>&#8249;</button>
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" hidden>&#8250;</button>
+      <button class="lightbox-close" id="lightbox-close" title="关闭">&times;</button>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
   </div>
 
   <div class="cart-drawer" id="cart-drawer" hidden>

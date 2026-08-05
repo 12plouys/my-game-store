@@ -42,7 +42,7 @@
     },
     {
       "id": "g1785937629486",
-      "name": "45号列车",
+      "name": "45号列车1.0.5.1",
       "section": "游戏",
       "categories": [
         "PC",
@@ -53,9 +53,9 @@
       "description": "神作，像素高质量动态CG，7月新游\n毫无疑问的给到：夯！",
       "cover": "images/1785937705925_ScreenShot_2026-08-05_214051_259.png",
       "screenshots": [
+        "images/1785937713831_ScreenShot_2026-08-05_214536_535.png",
         "images/1785937713828_ScreenShot_2026-08-05_214421_211.png",
         "images/1785937713829_ScreenShot_2026-08-05_214455_844.png",
-        "images/1785937713831_ScreenShot_2026-08-05_214536_535.png",
         "images/1785937713832_ScreenShot_2026-08-05_214613_032.png",
         "images/1785937713832_ScreenShot_2026-08-05_214629_386.png",
         "images/1785937713833_ScreenShot_2026-08-05_214700_691.png"
@@ -119,6 +119,46 @@
       "published": true
     },
     {
+      "id": "g1785941475237",
+      "name": "背德浴场",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "",
+      "cover": "images/1785941494614_ScreenShot_2026-08-05_224332_619.png",
+      "screenshots": [
+        "images/1785941498884_ScreenShot_2026-08-05_224321_621.png",
+        "images/1785941498886_ScreenShot_2026-08-05_224938_763.png",
+        "images/1785941498889_ScreenShot_2026-08-05_225103_753.png"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1785945253164",
+      "name": "水管工传奇1+2（两部作品）",
+      "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "像素画风非常棒，CG质量也可以。像素色才是真的色\n直接给到一个：夯！",
+      "cover": "images/1785945307581_ScreenShot_2026-08-05_234854_791.png",
+      "screenshots": [
+        "images/1785945319232_ScreenShot_2026-08-05_234904_927.png",
+        "images/1785945319233_ScreenShot_2026-08-05_234926_396.png",
+        "images/1785945319234_ScreenShot_2026-08-05_235102_457.png",
+        "images/1785945319235_ScreenShot_2026-08-05_235129_980.png",
+        "images/1785945319236_ScreenShot_2026-08-05_235356_423.png",
+        "images/1785945504843_ScreenShot_2026-08-05_235738_424.png"
+      ],
+      "published": true
+    },
+    {
       "id": "demo3",
       "name": "最强全女宗门1+2全集",
       "section": "漫画",
@@ -149,7 +189,7 @@
         "安卓"
       ],
       "category": "PC",
-      "price": "¥45",
+      "price": "¥4.5",
       "description": "很早之前的游戏了，老司机应该都玩过了，没玩过的朋友可以试一下，NTL题材受益人群不同\n这里可以给到一个：顶级",
       "cover": "images/1785932881336_ScreenShot_2026-07-11_044547_460.png",
       "screenshots": [
