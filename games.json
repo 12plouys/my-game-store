@@ -16,6 +16,94 @@
   },
   "games": [
     {
+      "id": "g1786048775633",
+      "name": "援助妊娠学园3.1（带存档攻略 ）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "质量很高，有种3D的感觉，画风也非常色，小马开大车题材。就是游戏本身有难度\n这里可以给到：夯",
+      "cover": "images/1786048782430_ScreenShot_2026-08-06_235756_684.jpg",
+      "screenshots": [
+        "images/1786048956646_ScreenShot_2026-08-06_235900_827.jpg",
+        "images/1786048956702_ScreenShot_2026-08-06_235951_975.jpg",
+        "images/1786048956751_ScreenShot_2026-08-07_000058_446.jpg",
+        "images/1786048956806_ScreenShot_2026-08-07_000224_317.jpg",
+        "images/1786048956867_ScreenShot_2026-08-07_000309_669.jpg",
+        "images/1786048956923_ScreenShot_2026-08-07_000532_277.jpg",
+        "images/1786048956974_ScreenShot_2026-08-07_000649_278.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786048584849",
+      "name": "修仙•母珠传v0.74a 官中步兵版+DLC2",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "修仙题材，立绘质量不错，画风也很棒。美中不足的就是游戏内容不多\n这里只能给到：人上人",
+      "cover": "images/1786048599322_ScreenShot_2026-08-06_233154_749.jpg",
+      "screenshots": [
+        "images/1786048619851_ScreenShot_2026-08-06_233928_779.jpg",
+        "images/1786048619635_ScreenShot_2026-08-06_233233_065.jpg",
+        "images/1786048619799_ScreenShot_2026-08-06_233809_347.jpg",
+        "images/1786048619905_ScreenShot_2026-08-06_234450_663.jpg",
+        "images/1786048619738_ScreenShot_2026-08-06_233651_803.jpg",
+        "images/1786048619947_ScreenShot_2026-08-06_234549_717.jpg",
+        "images/1786048619687_ScreenShot_2026-08-06_233545_190.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786048374062",
+      "name": "僵尸撤退2",
+      "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
+      "category": "安卓",
+      "price": "5",
+      "description": "质量非常高的一款游戏，CG真顶级，这部作品也算是有生之年了\n这里必须给到：夯！",
+      "cover": "images/1786048384181_ScreenShot_2026-08-06_230305_057.jpg",
+      "screenshots": [
+        "images/1786048442651_ScreenShot_2026-08-06_231333_016.jpg",
+        "images/1786048442691_ScreenShot_2026-08-06_232115_154.jpg",
+        "images/1786048442738_ScreenShot_2026-08-06_232206_697.jpg",
+        "images/1786048442824_ScreenShot_2026-08-06_232418_493.jpg",
+        "images/1786048442878_ScreenShot_2026-08-06_232514_114.jpg",
+        "images/1786048442929_ScreenShot_2026-08-06_232616_786.jpg",
+        "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
+        "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786048150846",
+      "name": "虫潮孤堡:机欲防线",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.3",
+      "description": "像素风格的游戏，CG质量不错，有塔防元素\n可以给到：顶级",
+      "cover": "images/1786048187098_ScreenShot_2026-08-06_225156_686.jpg",
+      "screenshots": [
+        "images/1786048198898_ScreenShot_2026-08-06_225427_774.jpg",
+        "images/1786048198647_ScreenShot_2026-08-06_225219_270.jpg",
+        "images/1786048198709_ScreenShot_2026-08-06_225258_546.jpg",
+        "images/1786048198770_ScreenShot_2026-08-06_225349_306.jpg",
+        "images/1786048198828_ScreenShot_2026-08-06_225407_930.jpg"
+      ],
+      "published": true
+    },
+    {
       "id": "demo4",
       "name": "乡间性活夏日+冬日（安卓apk+pc）",
       "section": "游戏",
