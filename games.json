@@ -16,6 +16,72 @@
   },
   "games": [
     {
+      "id": "g1786093923267",
+      "name": "塞雷卡2（带存档+mod）",
+      "section": "游戏",
+      "categories": [],
+      "category": "",
+      "price": "5.5",
+      "description": "神作，露出模拟器，玩法很多建模优秀，好玩爱玩\n必须给到：夯！",
+      "cover": "images/1786093942604_ScreenShot_2026-08-07_103915_570.jpg",
+      "screenshots": [
+        "images/1786094005341_ScreenShot_2026-08-07_112508_707.jpg",
+        "images/1786094005365_ScreenShot_2026-08-07_112753_143.jpg",
+        "images/1786094005386_ScreenShot_2026-08-07_112905_927.jpg",
+        "images/1786094024465_ScreenShot_2026-08-07_113057_253.jpg",
+        "images/1786094005444_ScreenShot_2026-08-07_115235_576.jpg",
+        "images/1786094005482_ScreenShot_2026-08-07_115329_016.jpg",
+        "images/1786094005520_ScreenShot_2026-08-07_115408_808.jpg",
+        "images/1786094005555_ScreenShot_2026-08-07_154536_991.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786093833052",
+      "name": "夏色四叶草（带存档）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "这个就不多说了，非常顶的一款游戏\n必须给到：夯！",
+      "cover": "images/1786093842394_ScreenShot_2026-08-07_161323_684.jpg",
+      "screenshots": [
+        "images/1786093918195_ScreenShot_2026-08-07_161836_758.jpg",
+        "images/1786093918264_ScreenShot_2026-08-07_162337_946.jpg",
+        "images/1786093918328_ScreenShot_2026-08-07_164101_178.jpg",
+        "images/1786093918381_ScreenShot_2026-08-07_164249_878.jpg",
+        "images/1786093918440_ScreenShot_2026-08-07_164417_416.jpg",
+        "images/1786093918496_ScreenShot_2026-08-07_164640_536.jpg",
+        "images/1786093918551_ScreenShot_2026-08-07_164816_120.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786093651092",
+      "name": "我的秘密暑假 My Secret Summer Vacation（带存档）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.8",
+      "description": "跟造星者物语一样的AI风，不得不承认AI现在已经很强了。。。\n对比造星者物语，有动态CG，质量不错\n这里可以给到：顶级",
+      "cover": "images/1786093684835_170731xxyzy3ax535533gd.jpg",
+      "screenshots": [
+        "images/1786093700677_ScreenShot_2026-08-07_170003_119.jpg",
+        "images/1786093700728_ScreenShot_2026-08-07_170057_884.jpg",
+        "images/1786093700783_ScreenShot_2026-08-07_170121_704.jpg",
+        "images/1786093700829_ScreenShot_2026-08-07_170129_024.jpg",
+        "images/1786093700882_ScreenShot_2026-08-07_170247_224.jpg",
+        "images/1786093700936_ScreenShot_2026-08-07_170348_130.jpg",
+        "images/1786093700973_ScreenShot_2026-08-07_170413_238.jpg",
+        "images/1786093701010_ScreenShot_2026-08-07_170430_604.jpg"
+      ],
+      "published": true
+    },
+    {
       "id": "g1786048775633",
       "name": "援助妊娠学园3.1（带存档攻略 ）",
       "section": "游戏",
@@ -108,7 +174,8 @@
       "name": "乡间性活夏日+冬日（安卓apk+pc）",
       "section": "游戏",
       "categories": [
-        "安卓"
+        "安卓",
+        "PC"
       ],
       "category": "安卓",
       "price": "¥5.5",
@@ -188,11 +255,38 @@
       "published": true
     },
     {
+      "id": "g1786096575167",
+      "name": "情欲按摩店（安卓+PC）",
+      "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "这游戏也不用多说了，带点经营元素，质量不错，值得一玩\n这里可以给到：夯",
+      "cover": "images/1786096605582_ScreenShot_2026-08-07_001209_284.jpg",
+      "screenshots": [
+        "images/1786096631164_ScreenShot_2026-08-07_001526_965.jpg",
+        "images/1786096631259_ScreenShot_2026-08-07_173657_487.jpg",
+        "images/1786096631214_ScreenShot_2026-08-07_002101_324.jpg",
+        "images/1786096631318_ScreenShot_2026-08-07_173959_130.jpg",
+        "images/1786096631361_ScreenShot_2026-08-07_174208_040.jpg",
+        "images/1786096631405_ScreenShot_2026-08-07_174234_580.jpg",
+        "images/1786096631450_ScreenShot_2026-08-07_174607_109.jpg",
+        "images/1786096631500_ScreenShot_2026-08-07_174645_998.jpg",
+        "images/1786096631547_ScreenShot_2026-08-07_174912_415.jpg"
+      ],
+      "published": true
+    },
+    {
       "id": "g1785933806571",
       "name": "母子系列漫画合集",
       "section": "漫画",
-      "categories": [],
-      "category": "",
+      "categories": [
+        "黑白漫画"
+      ],
+      "category": "黑白漫画",
       "price": "¥4.5",
       "description": "非常不错的母子本，画风非常棒非常符合我的口味，喜欢这个题材的朋友可以试试\n我这里给到一个：夯",
       "cover": "images/1785933839526_001_auqa.jpg",
@@ -203,6 +297,29 @@
         "images/1785933850128_0051.jpg",
         "images/1785933850131_053_cdsf.jpg",
         "images/1785933850133_093.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786094077680",
+      "name": "社群审查（steam官中无码+存档+dlc）",
+      "section": "游戏",
+      "categories": [],
+      "category": "",
+      "price": "5",
+      "description": "质量不错，动态CG，质量还是可以的\n这里可以给到：顶级",
+      "cover": "images/1786095124007_ScreenShot_2026-08-07_173052_002.jpg",
+      "screenshots": [
+        "images/1786095141787_ScreenShot_2026-08-07_172130_711.jpg",
+        "images/1786095141824_ScreenShot_2026-08-07_172406_289.jpg",
+        "images/1786095141860_ScreenShot_2026-08-07_172650_985.jpg",
+        "images/1786095142153_ScreenShot_2026-08-07_173002_871.jpg",
+        "images/1786095142200_ScreenShot_2026-08-07_173013_865.jpg",
+        "images/1786095141911_ScreenShot_2026-08-07_172723_395.jpg",
+        "images/1786095141964_ScreenShot_2026-08-07_172737_588.jpg",
+        "images/1786095142016_ScreenShot_2026-08-07_172843_661.jpg",
+        "images/1786095142067_ScreenShot_2026-08-07_172857_151.jpg",
+        "images/1786095142113_ScreenShot_2026-08-07_172951_008.jpg"
       ],
       "published": true
     },
