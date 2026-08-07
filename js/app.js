@@ -77,10 +77,20 @@ function openCart() {
   renderCart();
   renderCartContact();
   document.getElementById('cart-drawer').hidden = false;
+  maybeShowDiscount();
 }
 function closeCart() {
   document.getElementById('cart-drawer').hidden = true;
 }
+
+function maybeShowDiscount() {
+  if (cartItems.length >= 3) document.getElementById('discount-modal').hidden = false;
+}
+function closeDiscount() {
+  document.getElementById('discount-modal').hidden = true;
+}
+document.getElementById('discount-ok').addEventListener('click', closeDiscount);
+document.getElementById('discount-backdrop').addEventListener('click', closeDiscount);
 
 // 通用页面内弹窗
 let dialogOkHandler = null;
@@ -583,6 +593,7 @@ document.getElementById('lightbox-backdrop').addEventListener('click', closeLigh
 // Esc：优先关闭灯箱，其次关详情/购物车
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
+    if (!document.getElementById('discount-modal').hidden) { closeDiscount(); return; }
     if (lightboxOpen) { closeLightbox(); }
     else if (!document.getElementById('detail-modal').hidden) closeDetail();
   }
