@@ -189,28 +189,38 @@ document.getElementById('discount-backdrop').addEventListener('click', closeDisc
 
 // 通用页面内弹窗
 let dialogOkHandler = null;
-function showDialog(title, msgHtml, { okText = '确定', cancelText = null, onOk = null } = {}) {
+function showDialog(title, msgHtml, { okText = '确定', cancelText = null, onOk = null, link = null } = {}) {
   document.getElementById('dialog-title').textContent = title;
   document.getElementById('dialog-msg').innerHTML = msgHtml;
   const okBtn = document.getElementById('dialog-ok');
   const cancelBtn = document.getElementById('dialog-cancel');
+  const linkBtn = document.getElementById('dialog-link');
   okBtn.textContent = okText;
   okBtn.style.display = '';
   cancelBtn.style.display = cancelText ? '' : 'none';
   if (cancelText) cancelBtn.textContent = cancelText;
+  // 联系卖家按钮：传入 link 则显示并跳转，否则隐藏
+  linkBtn.style.display = link ? '' : 'none';
+  if (link) linkBtn.textContent = link.text || '联系卖家';
+  dialogLinkUrl = link ? link.url : null;
   // 保存 onOk 到临时属性（每次弹窗覆盖）
   dialogOkHandler = onOk;
   document.getElementById('app-dialog').hidden = false;
 }
+let dialogLinkUrl = null;
 function closeDialog() {
   document.getElementById('app-dialog').hidden = true;
   dialogOkHandler = null;
+  dialogLinkUrl = null;
 }
 document.getElementById('dialog-ok').addEventListener('click', () => {
   if (dialogOkHandler) dialogOkHandler();
   closeDialog();
 });
 document.getElementById('dialog-cancel').addEventListener('click', closeDialog);
+document.getElementById('dialog-link').addEventListener('click', () => {
+  if (dialogLinkUrl) window.open(dialogLinkUrl, '_blank', 'noopener');
+});
 document.getElementById('dialog-backdrop').addEventListener('click', closeDialog);
 
 function clearCart() {
@@ -234,7 +244,10 @@ function placeOrder() {
   const totalHtml = t.tier > 0
     ? `<span style="text-decoration:line-through;color:#9ca3af">¥${priceDigits(total)}</span> → <strong>¥${priceDigits(finalTotal)}</strong>（已含${t.tier === 2 ? getPromo().tier2Discount : getPromo().tier1Discount}折）`
     : `<strong>¥${priceDigits(total)}</strong>`;
-  showDialog('确认下单', `已选 <strong>${escapeHtml(String(items.length))}</strong> 件商品，合计 ${totalHtml}。<br><br>请对当前购物车清单<strong>截图保存</strong>，然后联系卖家完成交易。`);
+  showDialog('确认下单',
+    `已选 <strong>${escapeHtml(String(items.length))}</strong> 件商品，合计 ${totalHtml}。` +
+    `<span class="dialog-screenshot">请截屏购物车内的内容，方便与卖家核对订单</span>`,
+    { okText: '确定', link: { text: '联系卖家', url: 'https://m.tb.cn/h.85d9Vz3?tk=ZxuagBCRIxY' } });
 }
 
 document.getElementById('btn-clear-cart').addEventListener('click', clearCart);
