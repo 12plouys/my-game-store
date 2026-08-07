@@ -17,7 +17,12 @@ function toggleCart(game) {
   renderCartBadge();
   renderCart();
   syncAllCartButtons();
-  resetPromoDismissed(); // 购物车变化后重置，下次满足可再弹
+  // 检测是否掉出已弹档位：若当前件数已不满足已弹档，清除记录，下次达到该档可再弹
+  const items = getValidCartItems();
+  const dismissedTier = promoDismissedTier();
+  if (dismissedTier > 0 && getDiscountTier(items.length).tier < dismissedTier) {
+    resetPromoDismissed();
+  }
 }
 
 // 统一同步所有"加入购物车"按钮状态：按 cartItems 重算，保证删除后打勾状态还原
@@ -136,8 +141,9 @@ function getValidCartItems() {
   return cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
 }
 
-function promoDismissed() {
-  return !!localStorage.getItem(PROMO_DISMISS_KEY);
+// 已弹过的档位：1=9折档已弹，2=8折档已弹，0=未弹过
+function promoDismissedTier() {
+  return parseInt(localStorage.getItem(PROMO_DISMISS_KEY), 10) || 0;
 }
 function resetPromoDismissed() {
   localStorage.removeItem(PROMO_DISMISS_KEY);
@@ -147,10 +153,11 @@ function maybeShowDiscount() {
   const items = getValidCartItems();
   const t = getDiscountTier(items.length);
   if (t.tier === 0) return; // 不满足优惠，不弹
-  if (promoDismissed()) return; // 本会话已弹过
+  // 只有升到更高的档位才弹；同档内弹过一次后不再重复弹
+  if (t.tier <= promoDismissedTier()) return;
   applyPromoToModal(t);
   document.getElementById('discount-modal').hidden = false;
-  localStorage.setItem(PROMO_DISMISS_KEY, '1');
+  localStorage.setItem(PROMO_DISMISS_KEY, String(t.tier));
 }
 
 function applyPromoToModal(t) {
