@@ -43,7 +43,7 @@ function renderCart() {
   empty.hidden = items.length !== 0;
   let total = 0;
   items.forEach(g => {
-    total += parseFloat(String(g.price).replace(/[^0-9.]/g, '')) || 0;
+    total += priceNumber(g.price);
     const li = document.createElement('li');
     li.className = 'cart-item';
     li.innerHTML = `
@@ -56,7 +56,15 @@ function renderCart() {
     li.querySelector('.ci-del').addEventListener('click', () => toggleCart(g));
     list.appendChild(li);
   });
-  totalEl.textContent = '¥' + total.toFixed(total % 1 ? 2 : 0);
+  const discounted = items.length >= 3;
+  const finalTotal = discounted ? Math.round(total * 0.8 * 100) / 100 : total;
+  if (discounted) {
+    totalEl.innerHTML = `<span class="total-strike">¥${priceDigits(total)}</span>` +
+      `<span class="total-final">¥${priceDigits(finalTotal)}</span>` +
+      `<span class="total-tag">8折</span>`;
+  } else {
+    totalEl.textContent = '¥' + priceDigits(total);
+  }
   const hasItems = items.length > 0;
   document.getElementById('btn-clear-cart').disabled = !hasItems;
   document.getElementById('btn-checkout').disabled = !hasItems;
@@ -131,9 +139,14 @@ function clearCart() {
 }
 
 function placeOrder() {
-  const total = document.getElementById('cart-total').textContent;
-  const itemCount = cartItems.length;
-  showDialog('确认下单', `已选 <strong>${escapeHtml(String(itemCount))}</strong> 件商品，合计 <strong>${escapeHtml(total)}</strong>。<br><br>请对当前购物车清单<strong>截图保存</strong>，然后联系卖家完成交易。`);
+  const items = cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+  const total = items.reduce((s, g) => s + priceNumber(g.price), 0);
+  const discounted = items.length >= 3;
+  const finalTotal = discounted ? Math.round(total * 0.8 * 100) / 100 : total;
+  const totalHtml = discounted
+    ? `<span style="text-decoration:line-through;color:#9ca3af">¥${priceDigits(total)}</span> → <strong>¥${priceDigits(finalTotal)}</strong>（已含8折）`
+    : `<strong>¥${priceDigits(total)}</strong>`;
+  showDialog('确认下单', `已选 <strong>${escapeHtml(String(items.length))}</strong> 件商品，合计 ${totalHtml}。<br><br>请对当前购物车清单<strong>截图保存</strong>，然后联系卖家完成交易。`);
 }
 
 document.getElementById('btn-clear-cart').addEventListener('click', clearCart);
