@@ -446,7 +446,7 @@ function renderGames(list) {
 
 function renderPagination(total, totalPages) {
   const p = document.getElementById('pagination');
-  if (totalPages <= 1) { p.hidden = true; return; }
+  if (totalPages <= 1) { p.innerHTML = ''; p.hidden = true; return; }
   p.hidden = false;
   p.innerHTML = '';
   const btn = (label, page, opts = {}) => {
