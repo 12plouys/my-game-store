@@ -17,6 +17,7 @@ function toggleCart(game) {
   renderCartBadge();
   renderCart();
   syncAllCartButtons();
+  resetPromoDismissed(); // 购物车变化后重置，下次满足可再弹
 }
 
 // 统一同步所有"加入购物车"按钮状态：按 cartItems 重算，保证删除后打勾状态还原
@@ -71,12 +72,12 @@ function renderCart() {
     li.querySelector('.ci-del').addEventListener('click', () => toggleCart(g));
     list.appendChild(li);
   });
-  const discounted = items.length >= 3;
-  const finalTotal = discounted ? Math.round(total * 0.8 * 100) / 100 : total;
-  if (discounted) {
+  const discounted = getDiscountTier(items.length);
+  const finalTotal = Math.round(total * discounted.discount * 100) / 100;
+  if (discounted.tier > 0) {
     totalEl.innerHTML = `<span class="total-strike">¥${priceDigits(total)}</span>` +
       `<span class="total-final">¥${priceDigits(finalTotal)}</span>` +
-      `<span class="total-tag">8折</span>`;
+      `<span class="total-tag">${discounted.tier === 2 ? (getPromo().tier2Discount + '折') : (getPromo().tier1Discount + '折')}</span>`;
   } else {
     totalEl.textContent = '¥' + priceDigits(total);
   }
@@ -106,10 +107,73 @@ function closeCart() {
   document.getElementById('cart-drawer').hidden = true;
 }
 
-function maybeShowDiscount() {
-  const items = cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
-  if (items.length >= 3) document.getElementById('discount-modal').hidden = false;
+const PROMO_DISMISS_KEY = 'promo_dismissed';
+
+function getPromo() {
+  const p = (window._siteData && window._siteData.promo) || {};
+  return {
+    title: p.title || '恭喜触发优惠！',
+    btnText: p.btnText || '开心收下',
+    tier1Count: p.tier1Count || 3,
+    tier1Discount: p.tier1Discount || 9,
+    tier1Text: p.tier1Text || '购买三件及以上商品，立享 9 折优惠！',
+    tier2Count: p.tier2Count || 5,
+    tier2Discount: p.tier2Discount || 8,
+    tier2Text: p.tier2Text || '购买五件及以上商品，立享 8 折优惠！',
+    guideText: p.guideText || '买三件还差两件就能享受八折啦，快再挑挑吧！'
+  };
 }
+
+// 返回 { tier: 0=无优惠|1=9折|2=8折, discount: 折扣(如0.9), isTop: 是否最高档 }
+function getDiscountTier(count) {
+  const p = getPromo();
+  if (count >= p.tier2Count) return { tier: 2, discount: p.tier2Discount / 10, isTop: true };
+  if (count >= p.tier1Count) return { tier: 1, discount: p.tier1Discount / 10, isTop: false };
+  return { tier: 0, discount: 1, isTop: false };
+}
+
+function getValidCartItems() {
+  return cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+}
+
+function promoDismissed() {
+  return !!localStorage.getItem(PROMO_DISMISS_KEY);
+}
+function resetPromoDismissed() {
+  localStorage.removeItem(PROMO_DISMISS_KEY);
+}
+
+function maybeShowDiscount() {
+  const items = getValidCartItems();
+  const t = getDiscountTier(items.length);
+  if (t.tier === 0) return; // 不满足优惠，不弹
+  if (promoDismissed()) return; // 本会话已弹过
+  applyPromoToModal(t);
+  document.getElementById('discount-modal').hidden = false;
+  localStorage.setItem(PROMO_DISMISS_KEY, '1');
+}
+
+function applyPromoToModal(t) {
+  const p = getPromo();
+  document.getElementById('discount-title').textContent = p.title;
+  // 8折档：小狗动画；9折档：隐藏小狗，显示引导短句
+  const track = document.getElementById('discount-track');
+  const guide = document.getElementById('discount-guide');
+  const msg = document.getElementById('discount-msg');
+  // 用 textContent + CSS white-space:pre-line 支持换行，天然防 XSS
+  if (t.tier === 2) {
+    track.hidden = false;
+    msg.textContent = p.tier2Text;
+    guide.hidden = true;
+  } else {
+    track.hidden = true;
+    msg.textContent = p.tier1Text;
+    guide.textContent = p.guideText;
+    guide.hidden = false;
+  }
+  document.getElementById('discount-ok').textContent = p.btnText;
+}
+
 function closeDiscount() {
   document.getElementById('discount-modal').hidden = true;
 }
@@ -156,12 +220,12 @@ function clearCart() {
 }
 
 function placeOrder() {
-  const items = cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+  const items = getValidCartItems();
   const total = items.reduce((s, g) => s + priceNumber(g.price), 0);
-  const discounted = items.length >= 3;
-  const finalTotal = discounted ? Math.round(total * 0.8 * 100) / 100 : total;
-  const totalHtml = discounted
-    ? `<span style="text-decoration:line-through;color:#9ca3af">¥${priceDigits(total)}</span> → <strong>¥${priceDigits(finalTotal)}</strong>（已含8折）`
+  const t = getDiscountTier(items.length);
+  const finalTotal = Math.round(total * t.discount * 100) / 100;
+  const totalHtml = t.tier > 0
+    ? `<span style="text-decoration:line-through;color:#9ca3af">¥${priceDigits(total)}</span> → <strong>¥${priceDigits(finalTotal)}</strong>（已含${t.tier === 2 ? getPromo().tier2Discount : getPromo().tier1Discount}折）`
     : `<strong>¥${priceDigits(total)}</strong>`;
   showDialog('确认下单', `已选 <strong>${escapeHtml(String(items.length))}</strong> 件商品，合计 ${totalHtml}。<br><br>请对当前购物车清单<strong>截图保存</strong>，然后联系卖家完成交易。`);
 }
@@ -450,6 +514,7 @@ async function loadGames() {
     document.getElementById('announcement').textContent = data.site.announcement;
     document.getElementById('footer-disclaimer').textContent = data.site.footer || '';
     window._siteData = data.site;
+    resetPromoDismissed(); // 页面刷新后重置，下次满足可再弹
     renderSections();
     renderCategories('全部');
     applyFilter();
