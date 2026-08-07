@@ -16,9 +16,24 @@ function toggleCart(game) {
   saveCart();
   renderCartBadge();
   renderCart();
-  // 刷新所有卡片的 + 状态
-  const btn = document.querySelector(`.card-add[data-id="${CSS.escape(game.id)}"]`);
-  if (btn) { btn.classList.toggle('added', i < 0); btn.textContent = i < 0 ? '✓' : '+'; }
+  syncAllCartButtons();
+}
+
+// 统一同步所有"加入购物车"按钮状态：按 cartItems 重算，保证删除后打勾状态还原
+function syncAllCartButtons() {
+  document.querySelectorAll('.card-add').forEach(btn => {
+    const id = btn.dataset.id;
+    const inCart = cartItems.includes(id);
+    btn.classList.toggle('added', inCart);
+    btn.textContent = inCart ? '✓' : '+';
+  });
+  const detailBtn = document.getElementById('detail-add-btn');
+  if (detailBtn) {
+    const id = detailBtn.dataset.gid;
+    const inCart = id && cartItems.includes(id);
+    detailBtn.classList.toggle('added', inCart);
+    detailBtn.textContent = inCart ? '已在购物车 ✓' : '加入购物车';
+  }
 }
 
 function renderCartBadge() {
@@ -135,6 +150,7 @@ function clearCart() {
       saveCart();
       renderCartBadge();
       renderCart();
+      syncAllCartButtons();
     }
   });
 }
@@ -491,12 +507,11 @@ function openDetail(game) {
     <div class="modal-cats">${getGameCategories(game).map(c => `<span class="modal-category">${escapeHtml(c)}</span>`).join('')}</div>
     <p class="modal-desc">${escapeHtml(game.description || '暂无简介')}</p>`;
   const addBtn = document.getElementById('detail-add-btn');
-  addBtn.classList.toggle('added', cartItems.includes(game.id));
-  addBtn.textContent = cartItems.includes(game.id) ? '已在购物车 ✓' : '加入购物车';
+  addBtn.dataset.gid = game.id;
+  syncAllCartButtons();
   addBtn.onclick = () => {
     toggleCart(game);
-    addBtn.classList.toggle('added', cartItems.includes(game.id));
-    addBtn.textContent = cartItems.includes(game.id) ? '已在购物车 ✓' : '加入购物车';
+    syncAllCartButtons();
   };
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
