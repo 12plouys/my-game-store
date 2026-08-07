@@ -51,7 +51,7 @@ function renderCart() {
         ? `<img src="${g.cover}" alt="">`
         : '<span class="ci-placeholder">图</span>'}
       <span class="ci-name">${escapeHtml(g.name)}</span>
-      <span class="ci-price">${escapeHtml(g.price)}</span>
+      <span class="ci-price">${priceHtml(g.price)}</span>
       <button class="ci-del" data-id="${escapeHtml(g.id)}" aria-label="移除">&times;</button>`;
     li.querySelector('.ci-del').addEventListener('click', () => toggleCart(g));
     list.appendChild(li);
@@ -205,6 +205,20 @@ function isSafeImageUrl(url) {
   return /^(images\/|https?:\/\/)/i.test(url);
 }
 
+// 价格：兼容 "5.5" 或 "¥5.5"，统一提取数字
+function priceNumber(p) {
+  const n = parseFloat(String(p == null ? '' : p).replace(/[^0-9.]/g, ''));
+  return isFinite(n) ? n : 0;
+}
+function priceDigits(n) {
+  return n % 1 ? n.toFixed(2) : String(n);
+}
+function priceHtml(p) {
+  const n = priceNumber(p);
+  if (n <= 0) return escapeHtml(String(p == null ? '' : p)) || '—';
+  return `<span class="price-sym">¥</span>${priceDigits(n)}`;
+}
+
 let currentSection = '全部';
 let currentCategory = '全部';
 let currentPage = 1;
@@ -352,7 +366,7 @@ function buildCard(game) {
     <div class="card-body">
       <div class="card-name">${escapeHtml(game.name)}</div>
       <div class="card-meta">
-        <span class="card-price">${escapeHtml(game.price)}</span>
+        <span class="card-price">${priceHtml(game.price)}</span>
         <button class="card-add${inCart ? ' added' : ''}" data-id="${escapeHtml(game.id)}" aria-label="加入购物车">${inCart ? '✓' : '+'}</button>
       </div>
       <div class="card-tags">
@@ -449,7 +463,7 @@ function openDetail(game) {
     document.getElementById('gallery-thumbs').hidden = true;
   }
   infoEl.innerHTML = `
-    <div class="modal-title"><span>${escapeHtml(game.name)}</span><span class="modal-price">${escapeHtml(game.price)}</span></div>
+    <div class="modal-title"><span>${escapeHtml(game.name)}</span><span class="modal-price">${priceHtml(game.price)}</span></div>
     <div class="modal-cats">${getGameCategories(game).map(c => `<span class="modal-category">${escapeHtml(c)}</span>`).join('')}</div>
     <p class="modal-desc">${escapeHtml(game.description || '暂无简介')}</p>`;
   const addBtn = document.getElementById('detail-add-btn');
