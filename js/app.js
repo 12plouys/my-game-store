@@ -92,7 +92,8 @@ function closeCart() {
 }
 
 function maybeShowDiscount() {
-  if (cartItems.length >= 3) document.getElementById('discount-modal').hidden = false;
+  const items = cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+  if (items.length >= 3) document.getElementById('discount-modal').hidden = false;
 }
 function closeDiscount() {
   document.getElementById('discount-modal').hidden = true;
