@@ -12,15 +12,28 @@
       "游戏",
       "漫画",
       "视频"
-    ]
+    ],
+    "promo": {
+      "title": "恭喜触发优惠！",
+      "btnText": "开心收下",
+      "tier1Count": 3,
+      "tier1Discount": 9,
+      "tier1Text": "购买三件及以上商品，立享 9 折优惠！",
+      "tier2Count": 5,
+      "tier2Discount": 8,
+      "tier2Text": "购买五件及以上商品，立享 8 折优惠！",
+      "guideText": "买三件还差两件就能享受八折啦，快再挑挑吧！"
+    }
   },
   "games": [
     {
       "id": "g1786093923267",
       "name": "塞雷卡2（带存档+mod）",
       "section": "游戏",
-      "categories": [],
-      "category": "",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
       "price": "5.5",
       "description": "神作，露出模拟器，玩法很多建模优秀，好玩爱玩\n必须给到：夯！",
       "cover": "images/1786093942604_ScreenShot_2026-08-07_103915_570.jpg",
@@ -304,8 +317,10 @@
       "id": "g1786094077680",
       "name": "社群审查（steam官中无码+存档+dlc）",
       "section": "游戏",
-      "categories": [],
-      "category": "",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
       "price": "5",
       "description": "质量不错，动态CG，质量还是可以的\n这里可以给到：顶级",
       "cover": "images/1786095124007_ScreenShot_2026-08-07_173052_002.jpg",
