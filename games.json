@@ -2,7 +2,7 @@
   "site": {
     "name": "尴尬小狗的收藏目录",
     "announcement": "精选游戏，作者亲自品鉴，从夯到拉排名",
-    "footer": "本站仅作游戏展示，购买请联系卖家。",
+    "footer": "本站仅作游戏展示，购买请“闲鱼”联系卖家—尴尬小狗游戏铺（关注小店可免费选一款游戏！）",
     "contact": {
       "wechat": "",
       "qq": ""
@@ -16,16 +16,61 @@
     "promo": {
       "title": "恭喜触发优惠！",
       "btnText": "开心收下",
-      "tier1Count": 3,
+      "tier1Count": 2,
       "tier1Discount": 9,
-      "tier1Text": "购买三件及以上商品，立享 9 折优惠！",
-      "tier2Count": 5,
+      "tier1Text": "购买两件及以上商品，立享 9 折优惠！",
+      "tier2Count": 4,
       "tier2Discount": 8,
-      "tier2Text": "购买五件及以上商品，立享 8 折优惠！",
-      "guideText": "买三件还差两件就能享受八折啦，快再挑挑吧！"
+      "tier2Text": "购买四件及以上商品，立享 8 折优惠！",
+      "guideText": "还差两件即享八折优惠"
     }
   },
   "games": [
+    {
+      "id": "g1786115699349",
+      "name": "她本不该在这里v0.2",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "寻找伪人H版，CG质量不错，谁能拒绝做爱的时候嘴巴里突然伸出触手的女孩呢\n就是现在内容有点少，只能说值得期待了。。\n这里给到：顶级",
+      "cover": "images/1786115866065_ScreenShot_2026-08-07_224115_120.jpg",
+      "screenshots": [
+        "images/1786115877080_ScreenShot_2026-08-07_224220_950.jpg",
+        "images/1786115877138_ScreenShot_2026-08-07_224300_397.jpg",
+        "images/1786115877187_ScreenShot_2026-08-07_224804_397.jpg",
+        "images/1786115877241_ScreenShot_2026-08-07_224928_269.jpg",
+        "images/1786115877297_ScreenShot_2026-08-07_225428_392.jpg",
+        "images/1786115877345_ScreenShot_2026-08-07_230230_567.jpg",
+        "images/1786115877390_ScreenShot_2026-08-07_230244_598.jpg",
+        "images/1786115877440_ScreenShot_2026-08-07_230642_117.jpg",
+        "images/1786115877487_ScreenShot_2026-08-07_231258_955.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786111543705",
+      "name": "灵魂狩猎（0.33+0.4.1)",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "6",
+      "description": "抓鬼这一块，可玩性很高，别看现在版本还不高，但是内容已经很多了，CG质量也不错。好玩爱玩\n关于0.33版本角色动不了这个问题，原因大概率是因为存档冲突\n必须给到：夯！",
+      "cover": "images/1786111661167_ScreenShot_2026-08-07_220102_103.jpg",
+      "screenshots": [
+        "images/1786111665929_ScreenShot_2026-08-07_220006_985.jpg",
+        "images/1786111673816_ScreenShot_2026-08-07_220152_085.jpg",
+        "images/1786111673859_ScreenShot_2026-08-07_220227_537.jpg",
+        "images/1786111673900_ScreenShot_2026-08-07_220247_706.jpg",
+        "images/1786111673948_ScreenShot_2026-08-07_220432_465.jpg",
+        "images/1786111673990_ScreenShot_2026-08-07_220527_476.jpg"
+      ],
+      "published": true
+    },
     {
       "id": "g1786093923267",
       "name": "塞雷卡2（带存档+mod）",
@@ -34,7 +79,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "5.5",
+      "price": "6",
       "description": "神作，露出模拟器，玩法很多建模优秀，好玩爱玩\n必须给到：夯！",
       "cover": "images/1786093942604_ScreenShot_2026-08-07_103915_570.jpg",
       "screenshots": [
@@ -46,6 +91,78 @@
         "images/1786094005482_ScreenShot_2026-08-07_115329_016.jpg",
         "images/1786094005520_ScreenShot_2026-08-07_115408_808.jpg",
         "images/1786094005555_ScreenShot_2026-08-07_154536_991.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786048775633",
+      "name": "援助妊娠学园3.1（带存档攻略 ）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "质量很高，有种3D的感觉，画风也非常色，小马开大车题材。就是游戏本身有难度\n这里可以给到：夯",
+      "cover": "images/1786048782430_ScreenShot_2026-08-06_235756_684.jpg",
+      "screenshots": [
+        "images/1786048956646_ScreenShot_2026-08-06_235900_827.jpg",
+        "images/1786048956702_ScreenShot_2026-08-06_235951_975.jpg",
+        "images/1786048956751_ScreenShot_2026-08-07_000058_446.jpg",
+        "images/1786048956806_ScreenShot_2026-08-07_000224_317.jpg",
+        "images/1786048956867_ScreenShot_2026-08-07_000309_669.jpg",
+        "images/1786048956923_ScreenShot_2026-08-07_000532_277.jpg",
+        "images/1786048956974_ScreenShot_2026-08-07_000649_278.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786048374062",
+      "name": "僵尸撤退2",
+      "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
+      "category": "安卓",
+      "price": "5",
+      "description": "质量非常高的一款游戏，CG真顶级，这部作品也算是有生之年了\n这里必须给到：夯！",
+      "cover": "images/1786048384181_ScreenShot_2026-08-06_230305_057.jpg",
+      "screenshots": [
+        "images/1786048442651_ScreenShot_2026-08-06_231333_016.jpg",
+        "images/1786048442691_ScreenShot_2026-08-06_232115_154.jpg",
+        "images/1786048442738_ScreenShot_2026-08-06_232206_697.jpg",
+        "images/1786048442824_ScreenShot_2026-08-06_232418_493.jpg",
+        "images/1786048442878_ScreenShot_2026-08-06_232514_114.jpg",
+        "images/1786048442929_ScreenShot_2026-08-06_232616_786.jpg",
+        "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
+        "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "demo4",
+      "name": "乡间性活夏日+冬日（安卓apk+pc）",
+      "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
+      "category": "安卓",
+      "price": "6",
+      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
+      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.jpg",
+      "screenshots": [
+        "images/1785880453545_ScreenShot_2026-07-11_175902_488.jpg",
+        "images/1785880453552_ScreenShot_2026-07-11_180427_257.jpg",
+        "images/1785880453548_ScreenShot_2026-07-11_180336_732.jpg",
+        "images/1785880453550_ScreenShot_2026-07-11_180411_578.jpg",
+        "images/1785880453555_ScreenShot_2026-07-11_180724_403.jpg",
+        "images/1785880453557_ScreenShot_2026-07-11_180801_414.jpg",
+        "images/1785880453558_ScreenShot_2026-07-11_180900_804.jpg",
+        "images/1785880453560_ScreenShot_2026-07-11_180941_009.jpg",
+        "images/1785880453553_ScreenShot_2026-07-11_180526_101.jpg",
+        "images/1785880453554_ScreenShot_2026-07-11_180615_801.jpg"
       ],
       "published": true
     },
@@ -79,7 +196,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "4.8",
+      "price": "5",
       "description": "跟造星者物语一样的AI风，不得不承认AI现在已经很强了。。。\n对比造星者物语，有动态CG，质量不错\n这里可以给到：顶级",
       "cover": "images/1786093684835_170731xxyzy3ax535533gd.jpg",
       "screenshots": [
@@ -91,28 +208,6 @@
         "images/1786093700936_ScreenShot_2026-08-07_170348_130.jpg",
         "images/1786093700973_ScreenShot_2026-08-07_170413_238.jpg",
         "images/1786093701010_ScreenShot_2026-08-07_170430_604.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "g1786048775633",
-      "name": "援助妊娠学园3.1（带存档攻略 ）",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "5",
-      "description": "质量很高，有种3D的感觉，画风也非常色，小马开大车题材。就是游戏本身有难度\n这里可以给到：夯",
-      "cover": "images/1786048782430_ScreenShot_2026-08-06_235756_684.jpg",
-      "screenshots": [
-        "images/1786048956646_ScreenShot_2026-08-06_235900_827.jpg",
-        "images/1786048956702_ScreenShot_2026-08-06_235951_975.jpg",
-        "images/1786048956751_ScreenShot_2026-08-07_000058_446.jpg",
-        "images/1786048956806_ScreenShot_2026-08-07_000224_317.jpg",
-        "images/1786048956867_ScreenShot_2026-08-07_000309_669.jpg",
-        "images/1786048956923_ScreenShot_2026-08-07_000532_277.jpg",
-        "images/1786048956974_ScreenShot_2026-08-07_000649_278.jpg"
       ],
       "published": true
     },
@@ -139,30 +234,6 @@
       "published": true
     },
     {
-      "id": "g1786048374062",
-      "name": "僵尸撤退2",
-      "section": "游戏",
-      "categories": [
-        "安卓",
-        "PC"
-      ],
-      "category": "安卓",
-      "price": "5",
-      "description": "质量非常高的一款游戏，CG真顶级，这部作品也算是有生之年了\n这里必须给到：夯！",
-      "cover": "images/1786048384181_ScreenShot_2026-08-06_230305_057.jpg",
-      "screenshots": [
-        "images/1786048442651_ScreenShot_2026-08-06_231333_016.jpg",
-        "images/1786048442691_ScreenShot_2026-08-06_232115_154.jpg",
-        "images/1786048442738_ScreenShot_2026-08-06_232206_697.jpg",
-        "images/1786048442824_ScreenShot_2026-08-06_232418_493.jpg",
-        "images/1786048442878_ScreenShot_2026-08-06_232514_114.jpg",
-        "images/1786048442929_ScreenShot_2026-08-06_232616_786.jpg",
-        "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
-        "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
-      ],
-      "published": true
-    },
-    {
       "id": "g1786048150846",
       "name": "虫潮孤堡:机欲防线",
       "section": "游戏",
@@ -170,7 +241,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "4.3",
+      "price": "4.5",
       "description": "像素风格的游戏，CG质量不错，有塔防元素\n可以给到：顶级",
       "cover": "images/1786048187098_ScreenShot_2026-08-06_225156_686.jpg",
       "screenshots": [
@@ -183,32 +254,6 @@
       "published": true
     },
     {
-      "id": "demo4",
-      "name": "乡间性活夏日+冬日（安卓apk+pc）",
-      "section": "游戏",
-      "categories": [
-        "安卓",
-        "PC"
-      ],
-      "category": "安卓",
-      "price": "¥5.5",
-      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
-      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.jpg",
-      "screenshots": [
-        "images/1785880453545_ScreenShot_2026-07-11_175902_488.jpg",
-        "images/1785880453552_ScreenShot_2026-07-11_180427_257.jpg",
-        "images/1785880453548_ScreenShot_2026-07-11_180336_732.jpg",
-        "images/1785880453550_ScreenShot_2026-07-11_180411_578.jpg",
-        "images/1785880453555_ScreenShot_2026-07-11_180724_403.jpg",
-        "images/1785880453557_ScreenShot_2026-07-11_180801_414.jpg",
-        "images/1785880453558_ScreenShot_2026-07-11_180900_804.jpg",
-        "images/1785880453560_ScreenShot_2026-07-11_180941_009.jpg",
-        "images/1785880453553_ScreenShot_2026-07-11_180526_101.jpg",
-        "images/1785880453554_ScreenShot_2026-07-11_180615_801.jpg"
-      ],
-      "published": true
-    },
-    {
       "id": "g1785937629486",
       "name": "45号列车1.0.5.1",
       "section": "游戏",
@@ -217,7 +262,7 @@
         "安卓"
       ],
       "category": "PC",
-      "price": "¥5",
+      "price": "5",
       "description": "神作，像素高质量动态CG，7月新游\n毫无疑问的给到：夯！",
       "cover": "images/1785937705925_ScreenShot_2026-08-05_214051_259.jpg",
       "screenshots": [
@@ -238,7 +283,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.3",
+      "price": "4.5",
       "description": "NTR类型的游戏，CG质量不错\n可以给到顶级",
       "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.jpg",
       "screenshots": [
@@ -257,7 +302,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.5",
+      "price": "5",
       "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高\n给到一个夯",
       "cover": "images/1785879968631_ScreenShot_2026-07-11_041659_779.jpg",
       "screenshots": [
@@ -300,7 +345,7 @@
         "黑白漫画"
       ],
       "category": "黑白漫画",
-      "price": "¥4.5",
+      "price": "4.5",
       "description": "非常不错的母子本，画风非常棒非常符合我的口味，喜欢这个题材的朋友可以试试\n我这里给到一个：夯",
       "cover": "images/1785933839526_001_auqa.jpg",
       "screenshots": [
@@ -347,7 +392,7 @@
       ],
       "category": "PC",
       "price": "4.5",
-      "description": "",
+      "description": "游戏还不错，CG质量也可以\n这里给到：顶级",
       "cover": "images/1785941494614_ScreenShot_2026-08-05_224332_619.jpg",
       "screenshots": [
         "images/1785941498884_ScreenShot_2026-08-05_224321_621.jpg",
@@ -386,7 +431,7 @@
         "黑白漫画"
       ],
       "category": "黑白漫画",
-      "price": "¥4",
+      "price": "4",
       "description": "木竹仙子，齁齁齁这一块啊。修仙题材的漫画，质量很高，撸点满满。\n可以给到夯",
       "cover": "images/1785880175149_234_tsha.jpg",
       "screenshots": [
@@ -409,7 +454,7 @@
         "安卓"
       ],
       "category": "PC",
-      "price": "¥4.5",
+      "price": "4.5",
       "description": "很早之前的游戏了，老司机应该都玩过了，没玩过的朋友可以试一下，NTL题材受益人群不同\n这里可以给到一个：顶级",
       "cover": "images/1785932881336_ScreenShot_2026-07-11_044547_460.jpg",
       "screenshots": [
@@ -429,13 +474,34 @@
         "PC"
       ],
       "category": "安卓",
-      "price": "¥4.5",
+      "price": "4.5",
       "description": "玩法挺多的一款游戏，体验下来还不错\n可以给到：顶级",
       "cover": "images/1785932892206_ScreenShot_2026-07-11_043555_926.jpg",
       "screenshots": [
         "images/1785932899755_ScreenShot_2026-07-11_043607_505.jpg",
         "images/1785932899759_ScreenShot_2026-07-11_043704_767.jpg",
         "images/1785932899761_ScreenShot_2026-07-11_044021_639.jpg"
+      ],
+      "published": true
+    },
+    {
+      "id": "g1786112131244",
+      "name": "不是魅魔v2.1（安卓apk+PC）",
+      "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "寻找伪人H版，目前内容还行，CG质量也不错\n这个可以给到：顶级",
+      "cover": "images/1786112165145_ScreenShot_2026-08-07_221151_199.jpg",
+      "screenshots": [
+        "images/1786112173363_ScreenShot_2026-08-07_221514_890.jpg",
+        "images/1786112173158_ScreenShot_2026-08-07_221219_531.jpg",
+        "images/1786112173208_ScreenShot_2026-08-07_221243_714.jpg",
+        "images/1786112173256_ScreenShot_2026-08-07_221308_334.jpg",
+        "images/1786112173312_ScreenShot_2026-08-07_221427_896.jpg"
       ],
       "published": true
     },
@@ -447,7 +513,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.3",
+      "price": "4.5",
       "description": "小马拉大车，就是马太小了，都看不见主角了。\n豌豆射手这一块，没啥剧情就是纯战斗\n这里给到一个：人上人",
       "cover": "images/1785933007514_ScreenShot_2026-07-11_155335_836.jpg",
       "screenshots": [
@@ -466,7 +532,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.1",
+      "price": "4",
       "description": "CG质量还不错，NTL题材\n这里可以给到：人上人",
       "cover": "images/1785933139438_ScreenShot_2026-07-11_171055_474.jpg",
       "screenshots": [
@@ -488,7 +554,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.5",
+      "price": "4.5",
       "description": "画风不错，内置小游戏可以玩，CG质量也可以\n这里给到：顶级",
       "cover": "images/1785933348371_ScreenShot_2026-07-12_141242_699.jpg",
       "screenshots": [
@@ -507,7 +573,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "¥4.5",
+      "price": "4.5",
       "description": "像素风游戏，CG质量很不错，还是全动态的\n可以给到一个：顶级",
       "cover": "images/1785933721919_ScreenShot_2026-07-12_143042_832.jpg",
       "screenshots": [
