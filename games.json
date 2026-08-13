@@ -345,28 +345,50 @@
     },
     {
       "id": "g1786096575167",
-      "name": "情欲按摩店（安卓+PC）",
+      "name": "极道系列合集（安卓+PC）",
       "section": "游戏",
       "categories": [
         "PC",
         "安卓"
       ],
       "category": "PC",
-      "price": "5",
-      "description": "这游戏也不用多说了，带点经营元素，质量不错，值得一玩\n这里可以给到：夯",
-      "cover": "images/1786096605582_ScreenShot_2026-08-07_001209_284.jpg",
+      "price": "9",
+      "description": "极道女警EX、护身术、按摩店三款，全部都有安卓直装版，这个制作组的游戏我就不多介绍了，玩过的都懂。\n这里可以给到：夯",
+      "cover": "images/1786619136457_jidao.jpg",
       "screenshots": [
+        "images/1786616770411_ScreenShot_2026-08-13_182245_434.jpg",
+        "images/1786616770358_ScreenShot_2026-08-13_182145_640.jpg",
+        "images/1786618654155_ScreenShot_2026-08-13_185541_747.jpg",
+        "images/1786618654207_ScreenShot_2026-08-13_185720_041.jpg",
         "images/1786096631164_ScreenShot_2026-08-07_001526_965.jpg",
         "images/1786096631259_ScreenShot_2026-08-07_173657_487.jpg",
-        "images/1786096631214_ScreenShot_2026-08-07_002101_324.jpg",
-        "images/1786096631318_ScreenShot_2026-08-07_173959_130.jpg",
-        "images/1786096631361_ScreenShot_2026-08-07_174208_040.jpg",
         "images/1786096631405_ScreenShot_2026-08-07_174234_580.jpg",
-        "images/1786096631450_ScreenShot_2026-08-07_174607_109.jpg",
         "images/1786096631500_ScreenShot_2026-08-07_174645_998.jpg",
-        "images/1786096631547_ScreenShot_2026-08-07_174912_415.jpg"
+        "images/1786618302591_ScreenShot_2026-08-13_182747_978.jpg",
+        "images/1786618302638_ScreenShot_2026-08-13_184901_378.jpg",
+        "images/1786618448014_ScreenShot_2026-08-13_185352_617.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": [
+        {
+          "id": "s1786619145336",
+          "name": "极道EX",
+          "price": "4.5",
+          "cover": "images/1786619154471_ScreenShot_2026-08-13_181311_394.jpg"
+        },
+        {
+          "id": "s1786619170904",
+          "name": "护身术道馆",
+          "price": "4.5",
+          "cover": "images/1786619176459_ScreenShot_2026-08-13_181608_967.jpg"
+        },
+        {
+          "id": "s1786619196304",
+          "name": "情欲按摩店",
+          "price": "4.5",
+          "cover": "images/1786619229390_ScreenShot_2026-08-07_001209_284.jpg"
+        }
+      ]
     },
     {
       "id": "g1785933806571",
@@ -452,7 +474,8 @@
         "images/1785945319236_ScreenShot_2026-08-05_235356_423.jpg",
         "images/1785945504843_ScreenShot_2026-08-05_235738_424.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "demo3",
@@ -474,7 +497,8 @@
         "images/1785880187418_219_34.jpg",
         "images/1785880187420_325.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "demo5",
@@ -494,7 +518,8 @@
         "images/1785932652845_ScreenShot_2026-07-11_045002_533.jpg",
         "images/1785932652847_ScreenShot_2026-07-11_045051_403.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "demo6",
@@ -594,7 +619,8 @@
         "images/1785933316090_ScreenShot_2026-07-12_142456_013.jpg",
         "images/1785933316091_ScreenShot_2026-07-12_142557_146.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "demo10",
