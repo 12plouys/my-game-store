@@ -2,17 +2,31 @@ let allGames = [];
 const CART_KEY = 'game_cart';
 
 function loadCart() {
-  try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
-  catch { return []; }
+  let raw;
+  try { raw = JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+  catch { raw = []; }
+  if (!Array.isArray(raw)) raw = []; // 畸形 JSON（如 "{}"、"null"）兜底
+  return raw.map(it => {
+    // 旧格式：纯字符串商品 id → 视为合集
+    if (typeof it === 'string') return { gid: it, mode: 'bundle' };
+    // 畸形条目（null/数字等）跳过
+    if (typeof it !== 'object' || it === null) return null;
+    return { gid: it.gid, mode: it.mode === 'sub' ? 'sub' : 'bundle', subId: it.subId || null };
+  }).filter(it => it && it.gid);
 }
 function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cartItems)); }
 
 let cartItems = loadCart();
 
-function toggleCart(game) {
-  const i = cartItems.indexOf(game.id);
+function entryKey(e) {
+  return (e.gid || '') + '|' + (e.mode === 'sub' ? 'sub' : 'bundle') + '|' + (e.subId || '');
+}
+
+function toggleCart(entry) {
+  const key = entryKey(entry);
+  const i = cartItems.findIndex(it => entryKey(it) === key);
   if (i >= 0) cartItems.splice(i, 1);
-  else cartItems.push(game.id);
+  else cartItems.push(entry);
   saveCart();
   renderCartBadge();
   renderCart();
@@ -29,14 +43,14 @@ function toggleCart(game) {
 function syncAllCartButtons() {
   document.querySelectorAll('.card-add').forEach(btn => {
     const id = btn.dataset.id;
-    const inCart = cartItems.includes(id);
+    const inCart = cartItems.some(it => it.gid === id);
     btn.classList.toggle('added', inCart);
     btn.textContent = inCart ? '✓' : '+';
   });
   const detailBtn = document.getElementById('detail-add-btn');
   if (detailBtn) {
     const id = detailBtn.dataset.gid;
-    const inCart = id && cartItems.includes(id);
+    const inCart = id && cartItems.some(it => it.gid === id);
     detailBtn.classList.toggle('added', inCart);
     detailBtn.textContent = inCart ? '已在购物车 ✓' : '加入购物车';
   }
@@ -55,29 +69,54 @@ function renderCartBadge() {
   }
 }
 
+// 返回购物车行的展示信息；子项已被删除则返回 null（渲染时跳过该行）
+function getCartItemInfo(entry) {
+  const g = allGames.find(x => x.id === entry.gid);
+  if (!g) return null;
+  if (entry.mode === 'sub' && entry.subId) {
+    const sub = (g.subs || []).find(s => s.id === entry.subId);
+    if (!sub) return null;
+    return {
+      name: g.name + '·' + (sub.name || ''),
+      price: sub.price,
+      cover: sub.cover,
+      game: g
+    };
+  }
+  return { name: g.name, price: g.price, cover: g.cover, game: g };
+}
+
 function renderCart() {
   const list = document.getElementById('cart-list');
   const empty = document.getElementById('cart-empty');
   const totalEl = document.getElementById('cart-total');
   list.innerHTML = '';
-  const items = cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
-  empty.hidden = items.length !== 0;
   let total = 0;
-  items.forEach(g => {
-    total += priceNumber(g.price);
+  cartItems.forEach(entry => {
+    const info = getCartItemInfo(entry);
+    if (!info) return; // 商品或子项已删除，跳过
+    total += priceNumber(info.price);
     const li = document.createElement('li');
     li.className = 'cart-item';
     li.innerHTML = `
-      ${g.cover && isSafeImageUrl(g.cover)
-        ? `<img src="${g.cover}" alt="">`
+      ${info.cover && isSafeImageUrl(info.cover)
+        ? `<img src="${info.cover}" alt="">`
         : '<span class="ci-placeholder">图</span>'}
-      <span class="ci-name">${escapeHtml(g.name)}</span>
-      <span class="ci-price">${priceHtml(g.price)}</span>
-      <button class="ci-del" data-id="${escapeHtml(g.id)}" aria-label="移除">&times;</button>`;
-    li.querySelector('.ci-del').addEventListener('click', () => toggleCart(g));
+      <span class="ci-name">${escapeHtml(info.name)}</span>
+      <span class="ci-price">${priceHtml(info.price)}</span>
+      <button class="ci-del" data-id="${escapeHtml(entryKey(entry))}" aria-label="移除">&times;</button>`;
+    li.querySelector('.ci-del').addEventListener('click', () => {
+      cartItems = cartItems.filter(it => entryKey(it) !== entryKey(entry));
+      saveCart();
+      renderCartBadge();
+      renderCart();
+      syncAllCartButtons();
+    });
     list.appendChild(li);
   });
-  const discounted = getDiscountTier(items.length);
+  const validItems = getValidCartItems();
+  empty.hidden = validItems.length !== 0;
+  const discounted = getDiscountTier(validItems.length);
   const finalTotal = Math.round(total * discounted.discount * 100) / 100;
   if (discounted.tier > 0) {
     totalEl.innerHTML = `<span class="total-strike">¥${priceDigits(total)}</span>` +
@@ -86,7 +125,7 @@ function renderCart() {
   } else {
     totalEl.textContent = '¥' + priceDigits(total);
   }
-  const hasItems = items.length > 0;
+  const hasItems = validItems.length > 0;
   document.getElementById('btn-clear-cart').disabled = !hasItems;
   document.getElementById('btn-checkout').disabled = !hasItems;
 }
@@ -138,7 +177,10 @@ function getDiscountTier(count) {
 }
 
 function getValidCartItems() {
-  return cartItems.map(id => allGames.find(g => g.id === id)).filter(Boolean);
+  return cartItems.map(entry => {
+    const info = getCartItemInfo(entry);
+    return info ? { ...entry, info } : null;
+  }).filter(Boolean);
 }
 
 // 已弹过的档位：1=9折档已弹，2=8折档已弹，0=未弹过
@@ -238,7 +280,7 @@ function clearCart() {
 
 function placeOrder() {
   const items = getValidCartItems();
-  const total = items.reduce((s, g) => s + priceNumber(g.price), 0);
+  const total = items.reduce((s, it) => s + priceNumber(it.info.price), 0);
   const t = getDiscountTier(items.length);
   const finalTotal = Math.round(total * t.discount * 100) / 100;
   const totalHtml = t.tier > 0
@@ -484,7 +526,7 @@ function buildCard(game) {
   const coverHtml = game.cover && isSafeImageUrl(game.cover)
     ? `<img src="${game.cover}" alt="${escapeHtml(game.name)}" loading="lazy">`
     : escapeHtml(game.name.charAt(0));
-  const inCart = cartItems.includes(game.id);
+  const inCart = cartItems.some(it => it.gid === game.id);
   card.innerHTML = `
     <div class="card-cover">${coverHtml}</div>
     <div class="card-body">
@@ -505,9 +547,66 @@ function buildCard(game) {
   const addBtn = card.querySelector('.card-add');
   addBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    toggleCart(game);
+    handleAddClick(game);
   });
   return card;
+}
+
+// ── 选版弹窗：默认合集 + 子项列表 ──────────────────────────────
+function openSubPicker(game) {
+  document.getElementById('sub-title').textContent = game.name;
+  const main = document.getElementById('sub-main');
+  main.innerHTML = '';
+  const list = document.getElementById('sub-list');
+  list.innerHTML = '';
+  // 主选项：合集（默认选中）
+  main.appendChild(buildSubOption(game, { gid: game.id, mode: 'bundle' }, true));
+  // 其他版本
+  (game.subs || []).forEach(sub => {
+    list.appendChild(buildSubOption(game, { gid: game.id, mode: 'sub', subId: sub.id }, false));
+  });
+  document.getElementById('sub-modal').hidden = false;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSubPicker() {
+  document.getElementById('sub-modal').hidden = true;
+  // 详情弹窗或购物车抽屉仍开着时，保留其滚动锁，不重置 overflow
+  if (document.getElementById('detail-modal').hidden && document.getElementById('cart-drawer').hidden) {
+    document.body.style.overflow = '';
+  }
+}
+
+function buildSubOption(game, entry, isBundle) {
+  const sub = isBundle ? null : (game.subs || []).find(s => s.id === entry.subId);
+  const name = isBundle ? game.name : (sub && sub.name) || '';
+  const price = isBundle ? game.price : (sub && sub.price != null ? sub.price : '');
+  const cover = isBundle ? game.cover : (sub && sub.cover) || '';
+  const coverHtml = cover && isSafeImageUrl(cover)
+    ? `<img src="${cover}" alt="${escapeHtml(name)}">`
+    : '<span>图</span>';
+  const tag = isBundle ? '<span class="so-tag">合集</span>' : '';
+  const btn = document.createElement('button');
+  btn.className = 'sub-option' + (isBundle ? ' bundle' : '');
+  btn.innerHTML = `
+    <div class="so-cover">${coverHtml}${tag}</div>
+    <div class="so-name">${escapeHtml(name)}</div>
+    <div class="so-price">${priceHtml(price)}</div>`;
+  btn.addEventListener('click', () => {
+    toggleCart(entry);
+    closeSubPicker();
+    syncAllCartButtons();
+  });
+  return btn;
+}
+
+// 加购统一入口：有子项弹选版，无子项直接加购
+function handleAddClick(game) {
+  if (game.subs && game.subs.length) {
+    openSubPicker(game);
+  } else {
+    toggleCart({ gid: game.id, mode: 'bundle' });
+  }
 }
 
 function applyFilter() {
@@ -595,7 +694,7 @@ function openDetail(game) {
   addBtn.dataset.gid = game.id;
   syncAllCartButtons();
   addBtn.onclick = () => {
-    toggleCart(game);
+    handleAddClick(game);
     syncAllCartButtons();
   };
   modal.hidden = false;
@@ -704,9 +803,10 @@ document.getElementById('lightbox-next').addEventListener('click', () => lightbo
 document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
 document.getElementById('lightbox-backdrop').addEventListener('click', closeLightbox);
 
-// Esc：优先关闭灯箱，其次关详情/购物车
+// Esc：优先关闭选版弹窗，其次优惠弹窗/灯箱/详情/购物车
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
+    if (!document.getElementById('sub-modal').hidden) { closeSubPicker(); return; }
     if (!document.getElementById('discount-modal').hidden) { closeDiscount(); return; }
     if (lightboxOpen) { closeLightbox(); }
     else if (!document.getElementById('detail-modal').hidden) closeDetail();
@@ -724,5 +824,7 @@ function closeDetail() {
 
 document.getElementById('modal-close').addEventListener('click', closeDetail);
 document.getElementById('modal-backdrop').addEventListener('click', closeDetail);
+document.getElementById('sub-close').addEventListener('click', closeSubPicker);
+document.getElementById('sub-backdrop').addEventListener('click', closeSubPicker);
 
 loadGames();

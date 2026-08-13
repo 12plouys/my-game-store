@@ -47,7 +47,8 @@
         "images/1786115877440_ScreenShot_2026-08-07_230642_117.jpg",
         "images/1786115877487_ScreenShot_2026-08-07_231258_955.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1786111543705",
@@ -57,7 +58,7 @@
         "PC"
       ],
       "category": "PC",
-      "price": "6",
+      "price": "7",
       "description": "抓鬼这一块，可玩性很高，别看现在版本还不高，但是内容已经很多了，CG质量也不错。好玩爱玩\n关于0.33版本角色动不了这个问题，原因大概率是因为存档冲突\n必须给到：夯！",
       "cover": "images/1786111661167_ScreenShot_2026-08-07_220102_103.jpg",
       "screenshots": [
@@ -68,7 +69,21 @@
         "images/1786111673948_ScreenShot_2026-08-07_220432_465.jpg",
         "images/1786111673990_ScreenShot_2026-08-07_220527_476.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": [
+        {
+          "id": "s1786612032045",
+          "name": "灵魂狩猎 v0.3.3",
+          "price": "4",
+          "cover": "images/1786612041030_ScreenShot_2026-08-07_220006_985.jpg"
+        },
+        {
+          "id": "s1786612066622",
+          "name": "灵魂狩猎 v0.4.1",
+          "price": "4",
+          "cover": "images/1786612072763_ScreenShot_2026-08-07_220102_103.jpg"
+        }
+      ]
     },
     {
       "id": "g1786093923267",
@@ -91,7 +106,8 @@
         "images/1786094005520_ScreenShot_2026-08-07_115408_808.jpg",
         "images/1786094005555_ScreenShot_2026-08-07_154536_991.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1786048775633",
@@ -113,7 +129,8 @@
         "images/1786048956923_ScreenShot_2026-08-07_000532_277.jpg",
         "images/1786048956974_ScreenShot_2026-08-07_000649_278.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1786048374062",
@@ -137,7 +154,8 @@
         "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
         "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "demo4",
@@ -148,7 +166,7 @@
         "PC"
       ],
       "category": "安卓",
-      "price": "6",
+      "price": "7",
       "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
       "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.jpg",
       "screenshots": [
@@ -163,7 +181,21 @@
         "images/1785880453553_ScreenShot_2026-07-11_180526_101.jpg",
         "images/1785880453554_ScreenShot_2026-07-11_180615_801.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": [
+        {
+          "id": "s1786611945267",
+          "name": "乡村性活—夏日",
+          "price": "4.5",
+          "cover": "images/1786611950080_ScreenShot_2026-07-11_175809_710.jpg"
+        },
+        {
+          "id": "s1786611991132",
+          "name": "乡村性活—冬日",
+          "price": "4.5",
+          "cover": "images/1786611996930_ScreenShot_2026-07-11_175902_488.jpg"
+        }
+      ]
     },
     {
       "id": "g1786093833052",
