@@ -653,7 +653,7 @@ function openDetail(game) {
   const modal = document.getElementById('detail-modal');
   const infoEl = document.getElementById('modal-info');
   // 截图列表（主画廊/缩略图只显示截图）
-  const safeShots = (game.screenshots || []).filter(isSafeImageUrl).slice(0, 10);
+  const safeShots = (game.screenshots || []).filter(isSafeImageUrl);
   galleryShots = safeShots;
   galleryIndex = 0;
   // 灯箱浏览列表 = 封面（若有）+ 截图

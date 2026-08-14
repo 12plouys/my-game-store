@@ -60,9 +60,8 @@
       "category": "PC",
       "price": "7",
       "description": "抓鬼这一块，可玩性很高，别看现在版本还不高，但是内容已经很多了，CG质量也不错。好玩爱玩\n关于0.33版本角色动不了这个问题，原因大概率是因为存档冲突\n必须给到：夯！",
-      "cover": "images/1786111661167_ScreenShot_2026-08-07_220102_103.jpg",
+      "cover": "images/1786711034706_zhuagui.jpg",
       "screenshots": [
-        "images/1786111665929_ScreenShot_2026-08-07_220006_985.jpg",
         "images/1786111673816_ScreenShot_2026-08-07_220152_085.jpg",
         "images/1786111673859_ScreenShot_2026-08-07_220227_537.jpg",
         "images/1786111673900_ScreenShot_2026-08-07_220247_706.jpg",
@@ -133,217 +132,6 @@
       "subs": []
     },
     {
-      "id": "g1786048374062",
-      "name": "僵尸撤退2",
-      "section": "游戏",
-      "categories": [
-        "安卓",
-        "PC"
-      ],
-      "category": "安卓",
-      "price": "5",
-      "description": "质量非常高的一款游戏，CG真顶级，这部作品也算是有生之年了\n这里必须给到：夯！",
-      "cover": "images/1786048384181_ScreenShot_2026-08-06_230305_057.jpg",
-      "screenshots": [
-        "images/1786048442651_ScreenShot_2026-08-06_231333_016.jpg",
-        "images/1786048442691_ScreenShot_2026-08-06_232115_154.jpg",
-        "images/1786048442738_ScreenShot_2026-08-06_232206_697.jpg",
-        "images/1786048442824_ScreenShot_2026-08-06_232418_493.jpg",
-        "images/1786048442878_ScreenShot_2026-08-06_232514_114.jpg",
-        "images/1786048442929_ScreenShot_2026-08-06_232616_786.jpg",
-        "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
-        "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
-      ],
-      "published": true,
-      "subs": []
-    },
-    {
-      "id": "demo4",
-      "name": "乡间性活夏日+冬日（安卓apk+pc）",
-      "section": "游戏",
-      "categories": [
-        "安卓",
-        "PC"
-      ],
-      "category": "安卓",
-      "price": "7",
-      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
-      "cover": "images/1785880439187_ScreenShot_2026-07-11_175809_710.jpg",
-      "screenshots": [
-        "images/1785880453545_ScreenShot_2026-07-11_175902_488.jpg",
-        "images/1785880453552_ScreenShot_2026-07-11_180427_257.jpg",
-        "images/1785880453548_ScreenShot_2026-07-11_180336_732.jpg",
-        "images/1785880453550_ScreenShot_2026-07-11_180411_578.jpg",
-        "images/1785880453555_ScreenShot_2026-07-11_180724_403.jpg",
-        "images/1785880453557_ScreenShot_2026-07-11_180801_414.jpg",
-        "images/1785880453558_ScreenShot_2026-07-11_180900_804.jpg",
-        "images/1785880453560_ScreenShot_2026-07-11_180941_009.jpg",
-        "images/1785880453553_ScreenShot_2026-07-11_180526_101.jpg",
-        "images/1785880453554_ScreenShot_2026-07-11_180615_801.jpg"
-      ],
-      "published": true,
-      "subs": [
-        {
-          "id": "s1786611945267",
-          "name": "乡村性活—夏日",
-          "price": "4.5",
-          "cover": "images/1786611950080_ScreenShot_2026-07-11_175809_710.jpg"
-        },
-        {
-          "id": "s1786611991132",
-          "name": "乡村性活—冬日",
-          "price": "4.5",
-          "cover": "images/1786611996930_ScreenShot_2026-07-11_175902_488.jpg"
-        }
-      ]
-    },
-    {
-      "id": "g1786093833052",
-      "name": "夏色四叶草（带存档）",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "5",
-      "description": "这个就不多说了，非常顶的一款游戏\n必须给到：夯！",
-      "cover": "images/1786093842394_ScreenShot_2026-08-07_161323_684.jpg",
-      "screenshots": [
-        "images/1786093918195_ScreenShot_2026-08-07_161836_758.jpg",
-        "images/1786093918264_ScreenShot_2026-08-07_162337_946.jpg",
-        "images/1786093918328_ScreenShot_2026-08-07_164101_178.jpg",
-        "images/1786093918381_ScreenShot_2026-08-07_164249_878.jpg",
-        "images/1786093918440_ScreenShot_2026-08-07_164417_416.jpg",
-        "images/1786093918496_ScreenShot_2026-08-07_164640_536.jpg",
-        "images/1786093918551_ScreenShot_2026-08-07_164816_120.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "g1786093651092",
-      "name": "我的秘密暑假 My Secret Summer Vacation（带存档）",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "5",
-      "description": "跟造星者物语一样的AI风，不得不承认AI现在已经很强了。。。\n对比造星者物语，有动态CG，质量不错\n这里可以给到：顶级",
-      "cover": "images/1786093684835_170731xxyzy3ax535533gd.jpg",
-      "screenshots": [
-        "images/1786093700677_ScreenShot_2026-08-07_170003_119.jpg",
-        "images/1786093700728_ScreenShot_2026-08-07_170057_884.jpg",
-        "images/1786093700783_ScreenShot_2026-08-07_170121_704.jpg",
-        "images/1786093700829_ScreenShot_2026-08-07_170129_024.jpg",
-        "images/1786093700882_ScreenShot_2026-08-07_170247_224.jpg",
-        "images/1786093700936_ScreenShot_2026-08-07_170348_130.jpg",
-        "images/1786093700973_ScreenShot_2026-08-07_170413_238.jpg",
-        "images/1786093701010_ScreenShot_2026-08-07_170430_604.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "g1786048584849",
-      "name": "修仙•母珠传v0.74a 官中步兵版+DLC2",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "4.5",
-      "description": "修仙题材，立绘质量不错，画风也很棒。美中不足的就是游戏内容不多\n这里只能给到：人上人",
-      "cover": "images/1786048599322_ScreenShot_2026-08-06_233154_749.jpg",
-      "screenshots": [
-        "images/1786048619851_ScreenShot_2026-08-06_233928_779.jpg",
-        "images/1786048619635_ScreenShot_2026-08-06_233233_065.jpg",
-        "images/1786048619799_ScreenShot_2026-08-06_233809_347.jpg",
-        "images/1786048619905_ScreenShot_2026-08-06_234450_663.jpg",
-        "images/1786048619738_ScreenShot_2026-08-06_233651_803.jpg",
-        "images/1786048619947_ScreenShot_2026-08-06_234549_717.jpg",
-        "images/1786048619687_ScreenShot_2026-08-06_233545_190.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "g1786048150846",
-      "name": "虫潮孤堡:机欲防线",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "4.5",
-      "description": "像素风格的游戏，CG质量不错，有塔防元素\n可以给到：顶级",
-      "cover": "images/1786048187098_ScreenShot_2026-08-06_225156_686.jpg",
-      "screenshots": [
-        "images/1786048198898_ScreenShot_2026-08-06_225427_774.jpg",
-        "images/1786048198647_ScreenShot_2026-08-06_225219_270.jpg",
-        "images/1786048198709_ScreenShot_2026-08-06_225258_546.jpg",
-        "images/1786048198770_ScreenShot_2026-08-06_225349_306.jpg",
-        "images/1786048198828_ScreenShot_2026-08-06_225407_930.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "g1785937629486",
-      "name": "45号列车1.0.5.1",
-      "section": "游戏",
-      "categories": [
-        "PC",
-        "安卓"
-      ],
-      "category": "PC",
-      "price": "5",
-      "description": "神作，像素高质量动态CG，7月新游\n毫无疑问的给到：夯！",
-      "cover": "images/1785937705925_ScreenShot_2026-08-05_214051_259.jpg",
-      "screenshots": [
-        "images/1785937713831_ScreenShot_2026-08-05_214536_535.jpg",
-        "images/1785937713828_ScreenShot_2026-08-05_214421_211.jpg",
-        "images/1785937713829_ScreenShot_2026-08-05_214455_844.jpg",
-        "images/1785937713832_ScreenShot_2026-08-05_214613_032.jpg",
-        "images/1785937713832_ScreenShot_2026-08-05_214629_386.jpg",
-        "images/1785937713833_ScreenShot_2026-08-05_214700_691.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "demo1",
-      "name": "久子的秘密",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "4.5",
-      "description": "NTR类型的游戏，CG质量不错\n可以给到顶级",
-      "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.jpg",
-      "screenshots": [
-        "images/1785879644054_ScreenShot_2026-07-11_042814_569.jpg",
-        "images/1785879644052_ScreenShot_2026-07-11_042652_797.jpg",
-        "images/1785879644057_ScreenShot_2026-07-11_042854_075.jpg",
-        "images/1785879644049_ScreenShot_2026-07-11_042542_956.jpg"
-      ],
-      "published": true
-    },
-    {
-      "id": "demo2",
-      "name": "邻居家的妻子",
-      "section": "游戏",
-      "categories": [
-        "PC"
-      ],
-      "category": "PC",
-      "price": "5",
-      "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高\n给到一个夯",
-      "cover": "images/1785879968631_ScreenShot_2026-07-11_041659_779.jpg",
-      "screenshots": [
-        "images/1785879973101_ScreenShot_2026-07-11_041737_076.jpg",
-        "images/1785879973104_ScreenShot_2026-07-11_042103_896.jpg",
-        "images/1785879973106_ScreenShot_2026-07-11_042202_662.jpg"
-      ],
-      "published": true
-    },
-    {
       "id": "g1786096575167",
       "name": "极道系列合集（安卓+PC）",
       "section": "游戏",
@@ -391,6 +179,223 @@
       ]
     },
     {
+      "id": "g1786048374062",
+      "name": "僵尸撤退2",
+      "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
+      "category": "安卓",
+      "price": "5",
+      "description": "质量非常高的一款游戏，CG真顶级，这部作品也算是有生之年了\n这里必须给到：夯！",
+      "cover": "images/1786048384181_ScreenShot_2026-08-06_230305_057.jpg",
+      "screenshots": [
+        "images/1786048442651_ScreenShot_2026-08-06_231333_016.jpg",
+        "images/1786048442691_ScreenShot_2026-08-06_232115_154.jpg",
+        "images/1786048442738_ScreenShot_2026-08-06_232206_697.jpg",
+        "images/1786048442824_ScreenShot_2026-08-06_232418_493.jpg",
+        "images/1786048442878_ScreenShot_2026-08-06_232514_114.jpg",
+        "images/1786048442929_ScreenShot_2026-08-06_232616_786.jpg",
+        "images/1786048442974_ScreenShot_2026-08-06_232838_925.jpg",
+        "images/1786048442789_ScreenShot_2026-08-06_232334_126.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "demo4",
+      "name": "乡间性活夏日+冬日（安卓apk+pc）",
+      "section": "游戏",
+      "categories": [
+        "安卓",
+        "PC"
+      ],
+      "category": "安卓",
+      "price": "8",
+      "description": "神作，精美像素画风，全动态CG。质量特别特别高，色爆了\n夯完了！",
+      "cover": "images/1786711186719_XINGHUO8.jpg",
+      "screenshots": [
+        "images/1785880453552_ScreenShot_2026-07-11_180427_257.jpg",
+        "images/1785880453548_ScreenShot_2026-07-11_180336_732.jpg",
+        "images/1785880453550_ScreenShot_2026-07-11_180411_578.jpg",
+        "images/1785880453555_ScreenShot_2026-07-11_180724_403.jpg",
+        "images/1785880453557_ScreenShot_2026-07-11_180801_414.jpg",
+        "images/1785880453558_ScreenShot_2026-07-11_180900_804.jpg",
+        "images/1785880453560_ScreenShot_2026-07-11_180941_009.jpg",
+        "images/1785880453553_ScreenShot_2026-07-11_180526_101.jpg",
+        "images/1785880453554_ScreenShot_2026-07-11_180615_801.jpg"
+      ],
+      "published": true,
+      "subs": [
+        {
+          "id": "s1786611945267",
+          "name": "夏日",
+          "price": "4.5",
+          "cover": "images/1786611950080_ScreenShot_2026-07-11_175809_710.jpg"
+        },
+        {
+          "id": "s1786611991132",
+          "name": "冬日",
+          "price": "4.5",
+          "cover": "images/1786611996930_ScreenShot_2026-07-11_175902_488.jpg"
+        }
+      ]
+    },
+    {
+      "id": "g1786093833052",
+      "name": "夏色四叶草（带存档）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "这个就不多说了，非常顶的一款游戏\n必须给到：夯！",
+      "cover": "images/1786093842394_ScreenShot_2026-08-07_161323_684.jpg",
+      "screenshots": [
+        "images/1786093918195_ScreenShot_2026-08-07_161836_758.jpg",
+        "images/1786093918264_ScreenShot_2026-08-07_162337_946.jpg",
+        "images/1786093918328_ScreenShot_2026-08-07_164101_178.jpg",
+        "images/1786093918381_ScreenShot_2026-08-07_164249_878.jpg",
+        "images/1786093918440_ScreenShot_2026-08-07_164417_416.jpg",
+        "images/1786093918496_ScreenShot_2026-08-07_164640_536.jpg",
+        "images/1786093918551_ScreenShot_2026-08-07_164816_120.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "g1786093651092",
+      "name": "我的秘密暑假 My Secret Summer Vacation（带存档）",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "跟造星者物语一样的AI风，不得不承认AI现在已经很强了。。。\n对比造星者物语，有动态CG，质量不错\n这里可以给到：顶级",
+      "cover": "images/1786093684835_170731xxyzy3ax535533gd.jpg",
+      "screenshots": [
+        "images/1786093700677_ScreenShot_2026-08-07_170003_119.jpg",
+        "images/1786093700728_ScreenShot_2026-08-07_170057_884.jpg",
+        "images/1786093700783_ScreenShot_2026-08-07_170121_704.jpg",
+        "images/1786093700829_ScreenShot_2026-08-07_170129_024.jpg",
+        "images/1786093700882_ScreenShot_2026-08-07_170247_224.jpg",
+        "images/1786093700936_ScreenShot_2026-08-07_170348_130.jpg",
+        "images/1786093700973_ScreenShot_2026-08-07_170413_238.jpg",
+        "images/1786093701010_ScreenShot_2026-08-07_170430_604.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "g1786048584849",
+      "name": "修仙•母珠传v0.74a 官中步兵版+DLC2",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "修仙题材，立绘质量不错，画风也很棒。美中不足的就是游戏内容不多\n这里只能给到：人上人",
+      "cover": "images/1786048599322_ScreenShot_2026-08-06_233154_749.jpg",
+      "screenshots": [
+        "images/1786048619851_ScreenShot_2026-08-06_233928_779.jpg",
+        "images/1786048619635_ScreenShot_2026-08-06_233233_065.jpg",
+        "images/1786048619799_ScreenShot_2026-08-06_233809_347.jpg",
+        "images/1786048619905_ScreenShot_2026-08-06_234450_663.jpg",
+        "images/1786048619738_ScreenShot_2026-08-06_233651_803.jpg",
+        "images/1786048619947_ScreenShot_2026-08-06_234549_717.jpg",
+        "images/1786048619687_ScreenShot_2026-08-06_233545_190.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "g1786048150846",
+      "name": "虫潮孤堡:机欲防线",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "像素风格的游戏，CG质量不错，有塔防元素\n可以给到：顶级",
+      "cover": "images/1786048187098_ScreenShot_2026-08-06_225156_686.jpg",
+      "screenshots": [
+        "images/1786048198898_ScreenShot_2026-08-06_225427_774.jpg",
+        "images/1786048198647_ScreenShot_2026-08-06_225219_270.jpg",
+        "images/1786048198709_ScreenShot_2026-08-06_225258_546.jpg",
+        "images/1786048198770_ScreenShot_2026-08-06_225349_306.jpg",
+        "images/1786048198828_ScreenShot_2026-08-06_225407_930.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "g1785937629486",
+      "name": "45号列车1.0.5.1",
+      "section": "游戏",
+      "categories": [
+        "PC",
+        "安卓"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "神作，像素高质量动态CG，7月新游\n毫无疑问的给到：夯！",
+      "cover": "images/1785937705925_ScreenShot_2026-08-05_214051_259.jpg",
+      "screenshots": [
+        "images/1785937713831_ScreenShot_2026-08-05_214536_535.jpg",
+        "images/1785937713828_ScreenShot_2026-08-05_214421_211.jpg",
+        "images/1785937713829_ScreenShot_2026-08-05_214455_844.jpg",
+        "images/1785937713832_ScreenShot_2026-08-05_214613_032.jpg",
+        "images/1785937713832_ScreenShot_2026-08-05_214629_386.jpg",
+        "images/1785937713833_ScreenShot_2026-08-05_214700_691.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "demo1",
+      "name": "久子的秘密",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "4.5",
+      "description": "NTR类型的游戏，CG质量不错\n可以给到顶级",
+      "cover": "images/1785879633630_ScreenShot_2026-07-11_042524_497.jpg",
+      "screenshots": [
+        "images/1785879644054_ScreenShot_2026-07-11_042814_569.jpg",
+        "images/1785879644052_ScreenShot_2026-07-11_042652_797.jpg",
+        "images/1785879644057_ScreenShot_2026-07-11_042854_075.jpg",
+        "images/1785879644049_ScreenShot_2026-07-11_042542_956.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
+      "id": "demo2",
+      "name": "邻居家的妻子",
+      "section": "游戏",
+      "categories": [
+        "PC"
+      ],
+      "category": "PC",
+      "price": "5",
+      "description": "画风非常好的一款游戏，全动态CG。多分枝多路线，质量非常高\n给到一个夯",
+      "cover": "images/1785879968631_ScreenShot_2026-07-11_041659_779.jpg",
+      "screenshots": [
+        "images/1785879973101_ScreenShot_2026-07-11_041737_076.jpg",
+        "images/1785879973104_ScreenShot_2026-07-11_042103_896.jpg",
+        "images/1785879973106_ScreenShot_2026-07-11_042202_662.jpg"
+      ],
+      "published": true,
+      "subs": []
+    },
+    {
       "id": "g1785933806571",
       "name": "母子系列漫画合集",
       "section": "漫画",
@@ -409,7 +414,8 @@
         "images/1785933850131_053_cdsf.jpg",
         "images/1785933850133_093.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1786094077680",
@@ -434,7 +440,8 @@
         "images/1786095142067_ScreenShot_2026-08-07_172857_151.jpg",
         "images/1786095142113_ScreenShot_2026-08-07_172951_008.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1785941475237",
@@ -452,7 +459,8 @@
         "images/1785941498889_ScreenShot_2026-08-05_225103_753.jpg",
         "images/1785941498886_ScreenShot_2026-08-05_224938_763.jpg"
       ],
-      "published": true
+      "published": true,
+      "subs": []
     },
     {
       "id": "g1785945253164",
@@ -464,7 +472,7 @@
       ],
       "category": "PC",
       "price": "5",
-      "description": "像素画风非常棒，CG质量也可以。像素色才是真的色\n直接给到一个：夯！",
+      "description": "像素画风非常棒，CG质量也可以。像素色才是真的色，买一发二\n直接给到一个：夯！",
       "cover": "images/1785945307581_ScreenShot_2026-08-05_234854_791.jpg",
       "screenshots": [
         "images/1785945319232_ScreenShot_2026-08-05_234904_927.jpg",
