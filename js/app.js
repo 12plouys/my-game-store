@@ -39,6 +39,13 @@ function toggleCart(entry) {
   }
 }
 
+// 选版弹窗确认：确保加入购物车（已在购物车则保持不变，不触发移除）
+function addToCart(entry) {
+  const key = entryKey(entry);
+  if (cartItems.some(it => entryKey(it) === key)) return;
+  toggleCart(entry);
+}
+
 // 统一同步所有"加入购物车"按钮状态：按 cartItems 重算，保证删除后打勾状态还原
 function syncAllCartButtons() {
   document.querySelectorAll('.card-add').forEach(btn => {
@@ -553,18 +560,22 @@ function buildCard(game) {
 }
 
 // ── 选版弹窗：默认合集 + 子项列表 ──────────────────────────────
+let selectedSubEntry = null; // 选版弹窗当前选中的商品（合集或子项）
+
 function openSubPicker(game) {
+  selectedSubEntry = null;
   document.getElementById('sub-title').textContent = game.name;
   const main = document.getElementById('sub-main');
   main.innerHTML = '';
   const list = document.getElementById('sub-list');
   list.innerHTML = '';
-  // 主选项：合集（默认选中）
-  main.appendChild(buildSubOption(game, { gid: game.id, mode: 'bundle' }, true));
+  // 主选项：合集（不默认选中，由顾客点击选择）
+  main.appendChild(buildSubOption(game, { gid: game.id, mode: 'bundle' }));
   // 其他版本
   (game.subs || []).forEach(sub => {
-    list.appendChild(buildSubOption(game, { gid: game.id, mode: 'sub', subId: sub.id }, false));
+    list.appendChild(buildSubOption(game, { gid: game.id, mode: 'sub', subId: sub.id }));
   });
+  document.getElementById('sub-confirm').disabled = true;
   document.getElementById('sub-modal').hidden = false;
   document.body.style.overflow = 'hidden';
 }
@@ -577,7 +588,8 @@ function closeSubPicker() {
   }
 }
 
-function buildSubOption(game, entry, isBundle) {
+function buildSubOption(game, entry) {
+  const isBundle = entry.mode === 'bundle';
   const sub = isBundle ? null : (game.subs || []).find(s => s.id === entry.subId);
   const name = isBundle ? game.name : (sub && sub.name) || '';
   const price = isBundle ? game.price : (sub && sub.price != null ? sub.price : '');
@@ -587,15 +599,17 @@ function buildSubOption(game, entry, isBundle) {
     : '<span>图</span>';
   const tag = isBundle ? '<span class="so-tag">合集</span>' : '';
   const btn = document.createElement('button');
-  btn.className = 'sub-option' + (isBundle ? ' bundle' : '');
+  btn.className = 'sub-option';
   btn.innerHTML = `
     <div class="so-cover">${coverHtml}${tag}</div>
     <div class="so-name">${escapeHtml(name)}</div>
     <div class="so-price">${priceHtml(price)}</div>`;
+  // 点击 = 选中（单选高亮），不直接加购
   btn.addEventListener('click', () => {
-    toggleCart(entry);
-    closeSubPicker();
-    syncAllCartButtons();
+    document.querySelectorAll('.sub-option').forEach(o => o.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedSubEntry = entry;
+    document.getElementById('sub-confirm').disabled = false;
   });
   return btn;
 }
@@ -826,5 +840,11 @@ document.getElementById('modal-close').addEventListener('click', closeDetail);
 document.getElementById('modal-backdrop').addEventListener('click', closeDetail);
 document.getElementById('sub-close').addEventListener('click', closeSubPicker);
 document.getElementById('sub-backdrop').addEventListener('click', closeSubPicker);
+document.getElementById('sub-confirm').addEventListener('click', () => {
+  if (!selectedSubEntry) return;
+  addToCart(selectedSubEntry);
+  closeSubPicker();
+  syncAllCartButtons();
+});
 
 loadGames();
